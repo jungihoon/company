@@ -3,6 +3,15 @@
 /* css reset */
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Roboto:wght@100;300;400;500;700;900&display=swap");
 
+@font-face {
+  font-family: "Noto Sans KR2";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/notosanskr/v13/PbykFmXiEBPT4ITbgNA5Cgm203Tq4JJWq209pU0DPdWuqxJFA4GNDCBYtw.0.woff2) format("woff2");
+  unicode-range: U+0020-007E;
+}
+
 html,
 body,
 div,
@@ -185,7 +194,6 @@ font-family: "Roboto", sans-serif;
 #headerArea {
   width: 100%;
   padding: 25px 0;
-  /* position: fixed; */
   left: 0;
   top: 0;
   z-index: 100;
