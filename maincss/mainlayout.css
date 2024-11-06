@@ -100,8 +100,8 @@
 #content .business .business_content li a .icon {
   height: 60px;
   position: absolute;
-  right: -70px;
-  bottom: 60px;
+  right: -60px;
+  bottom: 20px;
   transition: all 0.4s ease;
 }
 #content .business .business_content li:first-child,
@@ -125,86 +125,183 @@
   transition-delay: 0;
 }
 #content .business .business_content li:hover .icon {
-  right: 2cm;
+  right: 20px;
   transition-delay: 0.28s;
 }
 
 .skill {
   width: 100%;
+}
+
+/* #content .skill .title {
+  margin-bottom: 50px;
+} */
+
+.skill .skill_wrap {
+  width: 100%;
+  height: 700px;
   padding: 100px 0;
   background: #f8f8f8;
 }
 
-.skill .skill_content {
-  width: 1700px;
+.skill .container {
   position: relative;
-  left: 50%;
-  transform: translateX(-50%);
   display: flex;
   justify-content: space-between;
+  width: 1400px;
+  margin: 0 auto;
+  /* left: 50%;
+  transform: translateX(-50%); */
 }
 
-#content .skill .title {
-  margin-bottom: 50px;
+.skill .container .menu {
+  width: 30%;
 }
 
-.skill .skill_content .skill_left {
-  width: 600px;
-}
-
-.skill .skill_content .skill_left .skill_list li {
+.skill .container .menu .skill_list li {
   margin: 10px 0 0 0;
 }
-.skill .skill_content .skill_left .skill_list li a {
-  display: block;
+.skill .container .menu .skill_list li a {
+  position: relative;
+  display: inline-block;
   padding: 10px 0;
-  font-size: 2rem;
+  font-size: 1.5rem;
+  font-weight: 500;
   line-height: 1;
 }
+.skill .container .menu .skill_list li a:before {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 4px;
+  background-color: #ff3300;
+  position: absolute;
+  right: -10px;
+  top: 50%;
+  transform: translate(100%, -50%);
+  transition: 0.4s ease-out;
+}
 
-.skill .skill_content .skill_left .skill_list li:hover a {
+.skill .container .menu .skill_list li a.active {
+  font-size: 2.5rem;
+  font-weight: 700;
   color: #ff3300;
 }
-.skill .skill_content .skill_left .skill_list li a i {
+.skill .container .menu .skill_list li a.active:before {
+  width: 20px;
+}
+.skill .container .menu .skill_list li a i {
   font-size: 1.3rem;
   vertical-align: 3px;
 }
-.skill .skill_content .skill_left .skill_list li .desc {
-  opacity: 0;
-  height: 0;
-  font-size: 1.2rem;
-}
-.skill .skill_content .skill_left .skill_list li:hover .desc {
-  height: auto;
-  opacity: 1;
-  transition: all 0.5s ease-in-out;
-}
-.skill .skill_content img {
-  width: 650px;
+
+.skill .container .items_wrap {
+  position: relative;
+  width: 70%;
+  height: 700px;
 }
 
-.skill .skill_content .skill_right {
-  width: 1000px;
-  position: relative;
+.skill .container .items {
+  /* position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; */
 }
-.skill .skill_content .skill_right img {
+.skill .container .items > .item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  transition: visibility 0s 0.3s, opacity 0.3s ease;
+}
+
+.skill .container .items > .item.on {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+.skill .container .items .item .bg {
+  clip-path: inset(100% 0 0 0);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: clip-path 0.8s cubic-bezier(0.17, 0.96, 0.75, 1);
+}
+.skill .container .items .item.on .bg {
+  clip-path: inset(0 0 0 0);
+  transition: clip-path 0.8s cubic-bezier(0.17, 0.96, 0.75, 1);
+}
+.skill .container .items .item .bg img {
   width: 100%;
   height: 700px;
   object-fit: cover;
   object-position: center;
 }
 
-.skill .skill_content .skill_right .text {
-  width: 100%;
+.skill .container .items .item .desc {
   position: absolute;
   bottom: 0;
-  right: 0px;
-  padding: 30px 0;
-  text-align: center;
-  font-size: 1.3rem;
+  left: 0;
+  width: 100%;
+  padding: 0 min(5.2083333333vw, 100px) min(3.125vw, 60px) min(5.2083333333vw, 100px);
+  display: flex;
+  justify-content: space-between;
+  /* align-items: start; */
+  align-items: flex-end;
   color: #fff;
-  backdrop-filter: blur(5px);
-  background: rgba(255, 255, 255, 0.1);
+  box-sizing: border-box;
+  z-index: 5;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.skill .container .items .item .desc p {
+  overflow: hidden;
+  position: relative;
+}
+
+.skill .container .items .item .desc p span {
+  display: inline-block;
+  position: relative;
+  font-weight: 700;
+  font-size: 2.188rem;
+  transform: translateY(100%);
+  transition: transform 1s cubic-bezier(0.67, 0.11, 0.39, 0.97);
+}
+
+.skill .container .items .item .desc .paging {
+  position: relative;
+  display: flex;
+  font-size: 1rem;
+  align-items: flex-end;
+  transform: translateY(100%);
+  transition: transform 1s cubic-bezier(0.67, 0.11, 0.39, 0.97);
+}
+.skill .container .items .item .desc .paging em {
+  visibility: hidden;
+  margin: 0 15px;
+}
+.skill .container .items .item .desc .paging:before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: #fff;
+  position: absolute;
+  left: calc(50% - 10px);
+  top: 50%;
+}
+
+.skill .container .items .item.on .desc {
+  opacity: 1;
+}
+
+.skill .container .items .item.on .desc p span,
+.skill .container .items .item.on .desc .paging {
+  transform: translateY(0);
 }
 
 .investment {
