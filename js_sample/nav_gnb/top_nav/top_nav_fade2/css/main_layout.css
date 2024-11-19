@@ -1,0 +1,30 @@
+﻿@charset "utf-8";
+/* CSS Document */
+/* base */
+*{margin:0;padding:0}
+ul,ol{list-style:none}
+a{color:#333;text-decoration:none}
+a:hover, a:active, a:focus{color:#333;}
+
+#wrap{width: 100%;}
+#headerArea{width: 100%; position: fixed; background: green; height: 57px;}
+#headerArea .headerInner{width: 1200px; margin: 0 auto;}
+
+/* gnb */
+ul.dropdownmenu{width:1000px; height:57px;float:left; margin-left:100px;}
+ul.dropdownmenu li.menu{float:left;position:relative; width: 16.66%; text-align: center;height:57px; }
+
+ul.dropdownmenu li a.depth1{display:block; font-size: 14px; transition: all .5s; padding:20px 0; color:#333;}
+
+
+/* 2depth 중요 */
+ul.dropdownmenu li ul{position:absolute;top:57px; left:0;width:400px; display: none;  padding: 15px 0 20px 5px ;}
+
+ul.dropdownmenu li ul li{ float:left; padding-right:15px;}
+ul.dropdownmenu li.menu ul li a{ display:block; color:#999; font-weight:bold;}
+ul.dropdownmenu li.menu ul li a:hover{color:#f00;}
+
+
+
+
+

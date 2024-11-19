@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      a {
+        color: #333;
+        text-decoration: none;
+      }
+      ul {
+        list-style: none;
+      }
+
+      .gallery {
+        width: 600px;
+        height: 502px;
+        border: 3px solid red;
+        position: relative;
+      }
+      .gallery .box {
+        padding: 20px;
+        display: none;
+      }
+      .gallery .box h4 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+      }
+      .gallery .img {
+        display: none;
+      }
+      .gallery img {
+        width: 600px;
+      }
+      .gallery a {
+        display: block;
+        width: 100px;
+        padding: 20px 0;
+        text-align: center;
+        font-size: 24px;
+        background: orange;
+        color: #fff;
+        position: absolute;
+        top: 250px;
+        opacity: 0.6;
+        transition: all 0.5s;
+      }
+      .gallery a:hover {
+        opacity: 1;
+      }
+      .gallery .prev {
+        left: 20px;
+      }
+      .gallery .next {
+        right: 20px;
+      }
+      .gallery span {
+        font-size: 30px;
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="gallery">
+      <div class="box">
+        <h4>타이틀01</h4>
+        <p>내용01</p>
+      </div>
+      <div class="img">
+        <img src="./images/big1.jpg" alt="" />
+      </div>
+      <a class="prev" href="#">prev</a>
+      <a class="next" href="#">next</a>
+      <span></span>
+    </div>
+
+    <script src="./js/jquery-1.7.1.min.js"></script>
+    <script>
+      var cnt = 0; // 0 1 2 3
+      var total = 4; //이미지의 총개수 4
+
+      // var h4text =['타이틀1','타이틀2','타이틀3','타이틀4'];
+      // var ptext =['내용1','내용2','내용3','내용4'];
+      // var imgscr = ['big1.jpg','big2.jpg','big3.jpg','big4.jpg'];
+
+      //객체배열만들기
+
+      var pro = [
+        { h4text: "타이틀1", ptext: "내용1", imgscr: "big1.jpg" },
+        { h4text: "타이틀2", ptext: "내용2", imgscr: "big2.jpg" },
+        { h4text: "타이틀3", ptext: "내용3", imgscr: "big3.jpg" },
+        { h4text: "타이틀4", ptext: "내용4", imgscr: "big4.jpg" },
+      ];
+      // pro[0].h4text    pro[0].ptext   pro[0].imgscr
+      // pro[1].h4text    pro[1].ptext   pro[1].imgscr
+      // pro[2].h4text    pro[2].ptext   pro[2].imgscr
+      // pro[3].h4text    pro[3].ptext   pro[3].imgscr
+
+      $(".gallery .box").fadeIn("slow");
+      $(".gallery .img").fadeIn("slow"); //첫번째 이미지 보여라
+
+      $(".gallery span").text(cnt + 1 + "/" + total); // 1/4
+      //console.log(total);
+
+      function change() {
+        $(".gallery .box h4").text(pro[cnt].h4text);
+        $(".gallery .box p").text(pro[cnt].ptext);
+        $(".gallery .box").hide().fadeIn("slow");
+        $(".gallery .img img").attr("src", "./images/" + pro[cnt].imgscr);
+        $(".gallery .img").hide().fadeIn("slow");
+      }
+
+      $(".next").click(function () {
+        cnt++; // 0 1 2 3  0 1 2 3  0 1 2 3
+        if (cnt == total) {
+          cnt = 0;
+        }
+        change();
+        $(".gallery span").text(cnt + 1 + "/" + total); // 이미지 카운트를 출력해라
+      });
+
+      $(".prev").click(function () {
+        cnt--; // 3 2 1 0   3 2 1 0   3 2 1 0
+        if (cnt == -1) {
+          cnt = total - 1;
+        }
+        change();
+        $(".gallery span").text(cnt + 1 + "/" + total); // 이미지 카운트를 출력해라
+      });
+    </script>
+  </body>
+</html>

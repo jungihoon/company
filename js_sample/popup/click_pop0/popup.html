@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>레이어 팝업 띄우기</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        a{
+            text-decoration: none;
+            color: #333;
+        }
+
+
+        .pop_gallery .box{
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,.7);
+            position: fixed;
+            left: 0;
+            top: 0;
+            display: none;
+            z-index: 10;
+        }
+ 
+        .pop_gallery .big{ 
+            width: 514px;
+            border: 5px solid #333;
+            background: #fff;
+            position: absolute;
+            padding: 10px;
+            left: 50%;
+            margin-left: -257px;
+            top:50%;
+            margin-top: -220px;
+            overflow: hidden;
+            display: none;
+            z-index: 20;
+        }
+ 
+        .pop_gallery p{
+            text-align: center;
+            padding: 10px; 
+        }
+
+        .pop_gallery .big .closeBtn{
+            display: block;
+            text-align: center;
+        }
+        
+    </style>
+   
+</head>
+<body>
+ 
+<div class="pop_gallery">
+   <div class="box"></div>
+   
+    <ul>
+        <li>
+                <a href="#" class="openBtn">
+                    <img src="images/a1.jpg" alt="확대이미지보기">
+                </a>
+
+                <div class="big">
+                    <img src="images/a2.jpg" alt="확대이미지">
+                    <p>이미지에 대한 내용 글1</p>
+                    <a class="closeBtn" href="#">닫기</a>
+                </div>
+        </li>
+        <li>
+                <a href="#" class="openBtn">
+                    <img src="images/b1.jpg" alt="확대이미지보기">
+                </a>
+
+                <div class="big">
+                    <img src="images/b2.jpg" alt="확대이미지">
+                    <p>이미지에 대한 내용 글1</p>
+                    <a class="closeBtn" href="#">닫기</a>
+                </div>            
+        </li>
+    </ul>
+
+</div>   
+
+    <script src="jquery-1.8.3.min.js"></script>
+    <script src="layer_popup.js"></script>
+    
+    
+</body>
+</html>

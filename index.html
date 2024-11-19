@@ -5,11 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GS건설</title>
     <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico" />
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+      rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css" />
 
     <link rel="stylesheet" href="./common/css/common.css" />
     <link rel="stylesheet" href="./maincss/mainlayout.css" />
     <script src="https://kit.fontawesome.com/f2fbef274a.js" crossorigin="anonymous"></script>
+    <!-- swiperJs -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
   </head>
   <body>
     <div class="skipNav">
@@ -20,32 +27,67 @@
     <div class="wrap">
       <header id="headerArea">
         <div class="header_inner">
-          <h1 class="logo"><a href="#">건설사 로고</a></h1>
+          <h1 class="logo"><a href="./index.html">건설사 로고</a></h1>
           <nav id="gnb">
             <h2 class="hidden">글로벌네비게이션</h2>
-            <ul>
-              <li>
-                <h3><a href="#">회사소개</a></h3>
+            <ul class="dropdownmenu">
+              <li class="menu">
+                <h3>
+                  <a href="../sub1/sub1_1.html" class="depth1">회사소개</a>
+                </h3>
+                <ul class="submenu">
+                  <li><a href="./sub1/sub1_1.html">Vision</a></li>
+                  <li><a href="./sub1/sub1_2.html">연혁</a></li>
+                  <li><a href="./sub1/sub1_3.html">CEO인사말</a></li>
+                  <li><a href="./sub1/sub1_4.html">오시는길</a></li>
+                </ul>
               </li>
 
-              <li>
-                <h3><a href="#">사업영역</a></h3>
+              <li class="menu">
+                <h3><a href="./sub2/sub2_1.html" class="depth1">사업영역</a></h3>
+                <ul class="submenu">
+                  <li><a href="./sub1/sub1_1.html">건축사업</a></li>
+                  <li><a href="./sub1/sub1_2.html">레저사업</a></li>
+                  <li><a href="./sub1/sub1_3.html">인프라사업</a></li>
+                  <li><a href="./sub1/sub1_3.html">전력사업</a></li>
+                </ul>
               </li>
 
-              <li>
-                <h3><a href="#">기술개발</a></h3>
+              <li class="menu">
+                <h3><a href="./sub3/sub3_1.html" class="depth1">기술개발</a></h3>
+                <ul class="submenu">
+                  <li><a href="./sub1/sub1_1.html">기술전략</a></li>
+                  <li><a href="./sub1/sub1_2.html">보유기술</a></li>
+                  <li><a href="./sub1/sub1_3.html">연구시설</a></li>
+                </ul>
               </li>
 
-              <li>
-                <h3><a href="#">투자정보</a></h3>
+              <li class="menu">
+                <h3><a href="./sub4/sub4_1.html" class="depth1">투자정보</a></h3>
+                <ul class="submenu">
+                  <li><a href="./sub1/sub1_1.html">경영정보</a></li>
+                  <li><a href="./sub1/sub1_2.html">주가정보</a></li>
+                  <li><a href="./sub1/sub1_3.html">재무정보</a></li>
+                </ul>
               </li>
 
-              <li>
-                <h3><a href="#">인재채용</a></h3>
+              <li class="menu">
+                <h3><a href="./sub5/sub5_1.html" class="depth1">인재채용</a></h3>
+                <ul class="submenu">
+                  <li><a href="./sub1/sub1_1.html">인재상</a></li>
+                  <li><a href="./sub1/sub1_2.html">인사제도</a></li>
+                  <li><a href="./sub1/sub1_3.html">채용안내</a></li>
+                  <li><a href="./sub1/sub1_3.html">채용문의</a></li>
+                </ul>
               </li>
 
-              <li>
-                <h3><a href="#">홍보센터</a></h3>
+              <li class="menu">
+                <h3><a href="./sub6/sub6_1.html" class="depth1">홍보센터</a></h3>
+                <ul class="submenu">
+                  <li><a href="./sub1/sub1_1.html">News</a></li>
+                  <li><a href="./sub1/sub1_2.html">홍보자료</a></li>
+                  <li><a href="./sub1/sub1_3.html">Story</a></li>
+                </ul>
               </li>
             </ul>
           </nav>
@@ -56,20 +98,75 @@
         </div>
       </header>
 
-      <div class="visual">
-        <!-- 
-          https://seoulone-ipark.co.kr/
-          https://seoulone-ipark.co.kr/images/premium-sd1.jpg 
-          https://seoulone-ipark.co.kr/images/vis-bg1.jpg
-         -->
-        <img src="./images/visual03.jpg" height="1050" alt="" />
-        <p class="hidden">우리는 우리를 넘어선다. GLOBAL BEST AND FIRST GS건설</p>
+      <div id="mainVisual" data-aos="fade-down">
+        <div class="main_txt">
+          <!-- <span class="text">우리는 우리를 넘어선다.</span><br />
+          <p class="btxt" data-aos="fade-up" data-aos-delay="400">GLOBAL BEST AND FIRST GS건설</p> -->
+          <!-- <div class="stxt" data-aos="fade-up" data-aos-delay="600">
+            첨단 기술과 전문 지식을 바탕으로 고객의 요구를 충족시키고 더 나은 세상을 위해
+            노력합니다.
+          </div> -->
+          <div class="controls" data-aos="fade-up" data-aos-delay="800">
+            <div class="circle">
+              <div class="autoplay-progress">
+                <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="20"></circle></svg>
+                <span class="bg"></span>
+              </div>
+              <div class="play">
+                <div class="swiper-pause"><span class="material-symbols-outlined">pause</span></div>
+                <div class="swiper-play">
+                  <span class="material-symbols-outlined">play_arrow</span>
+                </div>
+              </div>
+            </div>
+            <div class="arrow">
+              <span class="prev"><i class="material-symbols-outlined">west</i></span>
+              <div class="pager"></div>
+              <span class="next"><i class="material-symbols-outlined">east</i></span>
+            </div>
+          </div>
+        </div>
+        <div class="main_slide swiper-container">
+          <ul class="swiper-wrapper">
+            <li class="swiper-slide">
+              <div data-swiper-parallax-x="40%" class="bg bg01">
+                <div class="main_text">
+                  <span class="text">우리는 우리를 넘어선다.</span><br />
+                  <p class="btxt" data-aos="fade-up" data-aos-delay="400">
+                    GLOBAL BEST AND FIRST GS건설
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="swiper-slide">
+              <div data-swiper-parallax-x="40%" class="bg bg02">
+                <div class="main_text">
+                  <span class="text">고객과 함께 내일을 꿈꾸며</span><br />
+                  <p class="btxt" data-aos="fade-up" data-aos-delay="400">
+                    새로운 삶의 가치를 창조합니다.
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="swiper-slide">
+              <div data-swiper-parallax-x="40%" class="bg bg03">
+                <div class="main_text">
+                  <span class="text">지속 가능한 미래를 위해 </span><br />
+                  <p class="btxt" data-aos="fade-up" data-aos-delay="400">
+                    GS건설이 변화를 이끌어갑니다
+                  </p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- <div class="scroll">SCROLL DOWN<span></span></div> -->
       </div>
 
       <article id="content">
         <h2 class="hidden">본문콘텐츠영역</h2>
 
-        <section class="business">
+        <section class="business_box">
           <div class="title">
             <h3>사업소개</h3>
             <p>무한한 가능성을 지닌 자연의 터전에 새로운 공간을 창조합니다</p>
@@ -84,7 +181,8 @@
                   <p>
                     GS건설은 기술력을 바탕으로<br />
                     소비자에게 최고 주거공간을 제공하고 있으며<br />
-                    친환경, 에너지 절감형 등 새로운 패러다음의<br />주택개발을 통해 지속 성장의 기틀을 다지고 있습니다.
+                    친환경, 에너지 절감형 등 새로운 패러다음의<br />주택개발을 통해 지속 성장의
+                    기틀을 다지고 있습니다.
                   </p>
                 </div>
                 <div class="icon">
@@ -93,11 +191,15 @@
               </a>
             </li>
             <li>
-              <a href="#">
+              <a class="error" href="#">
                 <div class="desc">
                   <em class="sub-text">leisure</em>
                   <h4>레저</h4>
-                  <p>문화ㆍ예술 공연, 대규모 전시 행사를<br />완벽하게 수행할 수 있는각종 문화시설과<br />고품격 호텔 및 레져시설, 체육관 메인스타디움 등<br />스포츠시설 시공에서도 뛰어난 기술력과 풍부한 노하우를 축적하고 있습니다.</p>
+                  <p>
+                    문화ㆍ예술 공연, 대규모 전시 행사를 완벽하게<br />
+                    수행할 수 있는각종 문화시설과 고품격 호텔 및 <br />레져시설 등 스포츠시설
+                    시공에서도 뛰어난 <br />기술력과 풍부한 노하우를 가지고있습니다.
+                  </p>
                 </div>
                 <div class="icon">
                   <img src="https://harimholdings.com/img/svg/icon_esg_01_2.svg" alt="icon" />
@@ -110,13 +212,13 @@
                   <em class="sub-text">infrastructure</em>
                   <h4>인프라</h4>
                   <p>
-                    다수의 도로, 철도, 수자원, 만, 단지. 지하 저장시설 등의<br />
-                    사회인프라 건설을 수행 하였으며,<br />
-                    민간자본을 이용한 대규모 인프라를 건설하고 운영하는 높은 경쟁력을<br />확보하고 있습니다.
+                    다수의 도로, 철도, 수자원, 만, 단지. 지하 저장시설 <br />등의 사회인프라 건설을
+                    수행 하였으며, 민간자본을 <br />이용한 대규모 인프라를 건설하고 운영하는 높은<br />
+                    경쟁력을 확보하고 있습니다.
                   </p>
                 </div>
                 <div class="icon">
-                  <img src="https://harimholdings.com/img/svg/icon_esg_01_2.svg" alt="icon" />
+                  <img src="https://harimholdings.com/img/svg/icon_esg_01_3.svg" alt="icon" />
                 </div>
               </a>
             </li>
@@ -127,7 +229,8 @@
           <div class="title">
             <h3>기술개발</h3>
             <p>
-              GS건설 기술연구원은 GS건설 토목·건축·주택·플랜트·New Energy 사업의 경쟁력을 제고하고,<br />
+              GS건설 기술연구원은 GS건설 토목·건축·주택·플랜트·New Energy 사업의 경쟁력을
+              제고하고,<br />
               미래 지속가능경영에 기여할 수 있도록 역량을 집중하고 있습니다.
             </p>
           </div>
@@ -138,20 +241,20 @@
                 <ul class="skill_list">
                   <li>
                     <h4>
-                      <a href="#right_con1"> 기술전략</a>
+                      <a href="#right_con1" class="active"> 기술전략</a>
                       <!--<i class="fa-solid fa-circle-arrow-right"></i>-->
                     </h4>
                   </li>
 
                   <li>
                     <h4>
-                      <a href="#right_con2">보유기술</a>
+                      <a href="#right_con2" class="active">보유기술</a>
                     </h4>
                   </li>
 
                   <li>
                     <h4>
-                      <a href="#right_con3">연구시설</a>
+                      <a href="#right_con3" class="active">연구시설</a>
                     </h4>
                   </li>
                 </ul>
@@ -161,7 +264,9 @@
                 <div class="items">
                   <div class="item con1">
                     <div class="bg">
-                      <img src="https://www.hanwha.co.kr/assets/img/pages/main/business-img-1.jpg" alt="기술개발이미지" />
+                      <img
+                        src="https://www.hanwha.co.kr/assets/img/pages/main/business-img-1.jpg"
+                        alt="기술개발이미지" />
                     </div>
                     <div class="desc">
                       <p>
@@ -175,7 +280,11 @@
                     </div>
                   </div>
                   <div class="item con2">
-                    <div class="bg"><img src="https://www.hanwha.co.kr/assets/img/pages/main/business-img-3.jpg" alt="기술개발이미지" /></div>
+                    <div class="bg">
+                      <img
+                        src="https://www.hanwha.co.kr/assets/img/pages/main/business-img-3.jpg"
+                        alt="기술개발이미지" />
+                    </div>
                     <div class="desc">
                       <p>
                         <span>
@@ -188,7 +297,11 @@
                     </div>
                   </div>
                   <div class="item con3">
-                    <div class="bg"><img src="https://www.hanwha.co.kr/assets/img/pages/main/business-img-2.jpg" alt="기술개발이미지" /></div>
+                    <div class="bg">
+                      <img
+                        src="https://www.hanwha.co.kr/assets/img/pages/main/business-img-2.jpg"
+                        alt="기술개발이미지" />
+                    </div>
                     <div class="desc">
                       <p>
                         <span>
@@ -209,7 +322,10 @@
         <section class="investment">
           <div class="title">
             <h3>투자정보</h3>
-            <p>GS건설은 최고 의사결정기구인 이사회를 중심으로 이해관계자들의 의견을 반영하는 지속가능한 지배구조를 구축하고 있습니다</p>
+            <p>
+              GS건설은 최고 의사결정기구인 이사회를 중심으로 이해관계자들의 의견을 반영하는
+              지속가능한 지배구조를 구축하고 있습니다
+            </p>
           </div>
 
           <div class="container">
@@ -261,7 +377,10 @@
         <section class="recruit">
           <div class="title">
             <h3>인재채용</h3>
-            <p>GS건설은 최고의 가치 창출을 위해 새로운 분야의 ‘톱 티어’가 되고자 도전하는 인재와 함께합니다</p>
+            <p>
+              GS건설은 최고의 가치 창출을 위해 새로운 분야의 ‘톱 티어’가 되고자 도전하는 인재와
+              함께합니다
+            </p>
           </div>
           <div class="hiring">
             <div class="link_box">
@@ -285,7 +404,10 @@
                 <dl>
                   <dt>GS건설, AI 번역기로 현장 외국인 근로자 소통</dt>
                   <dd>
-                    GS건설이 현장 외국인 근로자들과 원활한 의사소통을 위해, AI번역 프로그램 '자이 보이스'를 개발해 활용에 들어갔습니다. 자이 보이스는 담당자가 한국어로 이야기를 하면 음성을 인식하고, 중국어, 베트남어 등 120여 개의 언어로 동시에 번역돼 문자로 표현됩니다.
+                    <!-- GS건설이 현장 외국인 근로자들과 원활한 의사소통을 위해, AI번역 프로그램 '자이
+                    보이스'를 개발해 활용에 들어갔습니다.  -->
+                    자이 보이스는 담당자가 한국어로 이야기를 하면 음성을 인식하고, 중국어, 베트남어
+                    등 120여 개의 언어로 동시에 번역돼 문자로 표현됩니다.
                     <span>[2024-12-11]</span>
                   </dd>
                 </dl>
@@ -297,7 +419,11 @@
                 <dl>
                   <dt>60년 된 느티나무가 로비에 GS건설, 직원 휴게공간 조성</dt>
                   <dd>
-                    GS건설은 서울 종로구 본사 로비에 60년 된 느티나무를 재활용한 조형물 '자이목(木)'을 설치하고 직원들의 휴게공간으로 재단장했다고 6일 밝혔다. GS건설은 당초 전시 용도로 사용된 본사 로비 공간을 이번에 직원들의 휴식·소통 공간으로 새롭게 꾸몄다.
+                    GS건설은 서울 종로구 본사 로비에 60년 된 느티나무를 재활용한 조형물
+                    '자이목(木)'을 설치하고 직원들의 휴게공간으로 재단장했다고 6일 밝혔다.
+                    <!-- GS건설은
+                    당초 전시 용도로 사용된 본사 로비 공간을 이번에 직원들의 휴식·소통 공간으로
+                    새롭게 꾸몄다. -->
                     <span>[2024-12-11]</span>
                   </dd>
                 </dl>
@@ -309,8 +435,12 @@
                 <dl>
                   <dt>GS건설, 3분기 영업이익 818억…전년比 35.9%↑</dt>
                   <dd>
-                    GS건설은 이날 공정 공시를 통해 3분기 매출 3조1092억원, 영업이익 818억원, 신규 수주 4조6143억원의 경영 실적(잠정)을 발표했다. 영업이익은 전년 동기 602억원 대비 35.9% 증가했는데, 3분기 누적으로는 2457억원으로 전년 동기 적자 대비 흑자전환했다. 3분기 당기순이익은 주택 개발사업
-                    투자이익의 영향으로 1208억을 달성하며 전년 동기 116억원 대비 939.5% 증가했다.
+                    GS건설은 이날 공정 공시를 통해 3분기 매출 3조1092억원, 영업이익 818억원, 신규
+                    수주 4조6143억원의 경영 실적(잠정)을 발표했다.
+                    <!-- 영업이익은 전년 동기 602억원 대비
+                    35.9% 증가했는데, 3분기 누적으로는 2457억원으로 전년 동기 적자 대비
+                    흑자전환했다. 3분기 당기순이익은 주택 개발사업 투자이익의 영향으로 1208억을
+                    달성하며 전년 동기 116억원 대비 939.5% 증가했다. -->
                     <span>[2024-12-11]</span>
                   </dd>
                 </dl>
@@ -322,8 +452,12 @@
                 <dl>
                   <dt>GS건설, 3분기 영업이익 818억…전년比 35.9%↑</dt>
                   <dd>
-                    GS건설은 이날 공정 공시를 통해 3분기 매출 3조1092억원, 영업이익 818억원, 신규 수주 4조6143억원의 경영 실적(잠정)을 발표했다. 영업이익은 전년 동기 602억원 대비 35.9% 증가했는데, 3분기 누적으로는 2457억원으로 전년 동기 적자 대비 흑자전환했다. 3분기 당기순이익은 주택 개발사업
-                    투자이익의 영향으로 1208억을 달성하며 전년 동기 116억원 대비 939.5% 증가했다.
+                    GS건설은 이날 공정 공시를 통해 3분기 매출 3조1092억원, 영업이익 818억원, 신규
+                    수주 4조6143억원의 경영 실적(잠정)을 발표했다.
+                    <!-- 영업이익은 전년 동기 602억원 대비
+                    35.9% 증가했는데, 3분기 누적으로는 2457억원으로 전년 동기 적자 대비
+                    흑자전환했다. 3분기 당기순이익은 주택 개발사업 투자이익의 영향으로 1208억을
+                    달성하며 전년 동기 116억원 대비 939.5% 증가했다. -->
                     <span>[2024-12-11]</span>
                   </dd>
                 </dl>
@@ -335,7 +469,11 @@
 
       <footer id="footerArea">
         <div class="footer_inner">
-          <a href="#" class="top_move"><span>TOP</span></a>
+          <div class="move">
+            <a class="top_move" title="상단 바로가기" href="#">
+              <span class="material-symbols-outlined"> arrow_upward </span>
+            </a>
+          </div>
           <div class="footer_info">
             <ul class="footer_menu">
               <li><a href="#">개인정보 처리방침</a></li>
@@ -351,9 +489,25 @@
           </div>
 
           <div class="footer_relation">
-            <div class="family_link">
-              <a class="family_site" href="#">Family Site +</a>
-              <div class="hidden">관련사이트링크</div>
+            <div class="select">
+              <a class="arrow" href="#"
+                >Family Site
+                <span><i class="fa-solid fa-chevron-up"></i></span>
+              </a>
+              <ul class="aList">
+                <li>
+                  <a
+                    href="https://www.gs.co.kr/ko/main"
+                    target="_blank"
+                    title="??사이트 새창에 열림"
+                    >(주)GS건설</a
+                  >
+                </li>
+                <li><a href="https://www.gscaltex.com/kr/">GS칼텍스</a></li>
+                <li><a href="https://gsnws.co.kr/">GS네트웍스</a></li>
+                <li><a href="https://www.fcseoul.com/">GS스포츠</a></li>
+                <li><a href="https://www.elysian.co.kr/">엘리시안</a></li>
+              </ul>
             </div>
 
             <ul class="sns_link">
@@ -376,7 +530,9 @@
     </div>
 
     <!-- 메인 공지 팝업 -->
-    <div id="showimage" style="z-index: 90; position: absolute; width: 322px; left: 70%; top: 300px">
+    <div
+      id="showimage"
+      style="z-index: 90; position: absolute; width: 322px; left: 70%; top: 300px">
       <script>
         function closeWin() {
           var chk = document.getElementById("Notice");
@@ -389,16 +545,59 @@
         }
       </script>
       <div>
-        <img src="./images/pop.png" alt="본 사이트는 상업적 목적이 아닌 개인 포트폴리오 용도로 만들어졌습니다. 홈페이지의 일부 내용과 기타 이미지 등은 그 출처가 따로 있음을 밝힙니다." />
+        <img
+          src="./images/pop.png"
+          alt="본 사이트는 상업적 목적이 아닌 개인 포트폴리오 용도로 만들어졌습니다. 홈페이지의 일부 내용과 기타 이미지 등은 그 출처가 따로 있음을 밝힙니다." />
       </div>
-      <div style="font-size: 12px; text-align: center; color: #666">
-        <input type="checkbox" name="Notice" id="Notice" value="" title="오늘은 이창을 열지 않음 선택상자" /><label for="Notice">오늘은 이창을 열지 않음.</label>
+      <div class="popup" style="font-size: 12px; text-align: center; color: #fff">
+        <input
+          type="checkbox"
+          name="Notice"
+          id="Notice"
+          value=""
+          title="오늘은 이창을 열지 않음 선택상자" /><label for="Notice"
+          >오늘은 이창을 열지 않음.</label
+        >
         <a href="#" onclick="closeWin();hidebox();return false;"> [close] </a>
       </div>
     </div>
 
     <script src="./mainjs/mainpopup.js"></script>
 
+    <script src="./common/js/jquery-1.12.4.min.js"></script>
+    <script src="./common/js/jquery-migrate-1.4.1.min.js"></script>
+    <!-- <script src="./common/js/jquery.easing.1.3.js"></script> -->
+
+    <script src="./common/js/common.js"></script>
+    <script src="./mainjs/mainjs.js"></script>
+    <!--사업소개 -->
+    <!-- <script>
+      var origin = 300; //li의 원래 너비값
+      var min_width = 250; ////작아졌을때 사이즈
+      var max_width = 400; //li에 마우스 엔터 되었을때
+
+      $(".business_box li").hover(
+        //마우스 엔터 시
+        function () {
+          $(".business_box li").animate({ width: min_width }, 300).clearQueue();
+          $(this).animate({ width: max_width }, 300).clearQueue();
+          $(this).find("dt").css({ "margin-top": "100px", color: "orange", "font-size": "1.8em" });
+          $(this)
+            .find("dd")
+            .css({ opacity: "1", transition: "all .3s", "transition-delay": ".3s" });
+          $(this).find("dl").css("background", "rgba(0,0,0,.6)");
+        },
+        function () {
+          // 마우스 리브 시
+          $(".business_box li").animate({ width: origin }, 300).clearQueue();
+          $(this).find("dt").css({ "margin-top": "200px", color: "#fff", "font-size": "1.5em" });
+          $(this).find("dd").css({ opacity: "0", transition: "none" });
+          $(this).find("dl").css("background", "none");
+        }
+      );
+    </script> -->
+
+    <!--  -->
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         // 메뉴 항목과 아이템 섹션의 각 div 선택
@@ -428,5 +627,50 @@
         });
       });
     </script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <!-- <script>
+      const progressCircle = document.querySelector("#mainVisual .autoplay-progress svg");
+
+      const progressContent = document.querySelector("#mainVisual .autoplay-progress span");
+
+      var mainSwiper = new Swiper(".main_slide", {
+        loop: true,
+        speed: 1200,
+        parallax: true,
+        slideActiveClass: "on",
+        autoplay: {
+          delay: 3200,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: "#mainVisual .pager",
+          type: "fraction",
+        },
+        navigation: {
+          nextEl: "#mainVisual .next",
+          prevEl: "#mainVisual .prev",
+        },
+        on: {
+          autoplayTimeLeft(s, time, progress) {
+            progressCircle.style.setProperty("--progress", 1 - progress);
+          },
+        },
+      });
+      $("#mainVisual .swiper-pause").click(function () {
+        mainSwiper.autoplay.stop();
+      });
+      $("#mainVisual .swiper-play").click(function () {
+        mainSwiper.autoplay.start();
+      });
+      $(function () {
+        $("#mainVisual .play").click(function () {
+          $(this).toggleClass("on");
+        });
+      });
+    </script> -->
   </body>
 </html>

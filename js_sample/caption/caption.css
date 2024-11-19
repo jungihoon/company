@@ -1,0 +1,13 @@
+/* CSS Document */
+*{margin:0; padding:0}
+
+/* boxgrid Jquery*/
+.boxgrid{width: 287px; height: 125px; overflow: hidden; position: relative;
+ margin:20px}
+.boxgrid img{position: absolute; top: 0; left: 0; border: 0;}
+.boxgrid dt{padding:5px 10px; color:#fff; font-weight:bold;font-family:arial;font-size:0.923em}
+.boxgrid dd{padding:10px 0 0 10px;color:#fff;font-size:0.846em}
+.boxcaption{ position: absolute; background:rgba(0,0,0,.7); height: 125px; width: 100%;}
+.boxgrid .boxcaption {top:95px;left: 0} /* top값을 수정한다.  */
+.boxgrid .boxcaption dd{line-height:1.5em}
+.boxgrid .boxcaption a{color:#FCF; text-decoration:none; }

@@ -1,0 +1,30 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{margin: 0; padding: 0;}
+ul{list-style: none;}
+a{color: #333; text-decoration: none;}
+
+.faq{width:650px; border-bottom:1px solid #ddd;font-size:12px}  
+.faq .hgroup{position:relative;margin:0 0 10px 0;}  
+.faq .hgroup .all{position:absolute; top:5px; right:10px;  font-size: 20px; }  
+
+.faq .q{border-top:1px solid #ddd}  
+.faq .q a.trigger{display:block;padding:10px 15px;background:#fafafa;color:#333;}  
+.faq .hide .q a.trigger{font-weight:normal;background:none}  
+.faq .q a.trigger:hover,  
+.faq .q a.trigger:active,  
+.faq .q a.trigger:focus{background:#feeddd;color:#000}  
+.faq .a{padding:10px 15px;line-height:1.5em; text-align: justify; overflow:hidden; display: none;} 
+
+.hidden{display: block; position: absolute; left:-1000%; top:0; width: 1px;
+        height: 1px; overflow: hidden; color: #fff;}
+
+
+
+
+
+
+
+
+

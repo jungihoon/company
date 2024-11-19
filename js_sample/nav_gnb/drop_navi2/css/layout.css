@@ -1,0 +1,44 @@
+﻿@charset "utf-8";
+/* CSS Document */
+*{margin:0; padding:0;}
+body{font-family:"돋움", "돋움체"; font-size:14px;}
+ul,ol{ list-style:none;}
+a{color:#333; text-decoration:none;}
+
+body{background: green;}
+
+.wrap{width: 100%;}
+
+#headerArea{width:100%; height:50px;border-bottom:1px solid #999; 
+	 position: fixed; left:0; top:0; background: #fff;}
+#headerArea .headerInner{width: 1000px; margin: 0 auto;}
+		
+	#gnb{clear:both;width:1000px;padding-top:18px;} 
+	
+	#gnb ul.dropdownmenu{float:left;}
+	#gnb ul.dropdownmenu li.menu{position:relative;float:left;width:166px;height:35px;}
+	#gnb ul.dropdownmenu li h3{position:relative;width:166px;height:20px; overflow:hidden}
+	
+    #gnb ul.dropdownmenu li a.depth1{position:absolute;text-indent:-999px;display:block;width:166px;height:42px;}
+	#gnb ul.dropdownmenu li.m1 a.depth1{
+			background:url(../images/main_nav1.jpg) 0 0 no-repeat;}
+	#gnb ul.dropdownmenu li.m2 a.depth1{
+			background:url(../images/main_nav2.jpg) 0 0 no-repeat;}
+	#gnb ul.dropdownmenu li.m3 a.depth1{
+			background:url(../images/main_nav3.jpg) 0 0 no-repeat;}
+	#gnb ul.dropdownmenu li.m4 a.depth1{ 
+			background:url(../images/main_nav4.jpg) 0 0 no-repeat;}
+	#gnb ul.dropdownmenu li.m5 a.depth1{
+			background:url(../images/main_nav5.jpg) 0 0 no-repeat;}
+	#gnb ul.dropdownmenu li.m6 a.depth1{ 
+			background:url(../images/main_nav6.jpg) 0 0 no-repeat;}
+	
+    /* 2depth */
+	#gnb ul.dropdownmenu li ul{width:166px; height:90px; position:absolute;top:35px;left:0;padding:15px 0;
+		         line-height:1.5em; display:none}
+
+	#gnb ul.dropdownmenu li ul li{ text-align:center; font-weight:bold;}
+	#gnb ul.dropdownmenu li ul li a{color:#666;text-decoration:none}
+	#gnb ul.dropdownmenu li ul li a:hover{color:#333;text-decoration:none}
+
+	

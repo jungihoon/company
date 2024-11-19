@@ -1,0 +1,12 @@
+{
+    "sam": [
+        {"Name":"정샘물 립프레션","Price":30000,"Descript":"인상을 결정짓는 3초 컬러초경량무중력매트","Image":"images/product01.jpg"},
+        {"Name":"정샘물 프로래스팅 피니쉬 파우더","Price":36000,"Descript":"첫메이크업그대로롱래스팅파우더","Image":"images/product02.jpg"},
+        {"Name":"정샘물 핑크 퍼펙션 에디션","Price":30000,"Descript":"리미티드 에디션Pink Perfection","Image":"images/product03.jpg"},
+        {"Name":"정샘물 미니 파잉 스킨케어 세트","Price":30000,"Descript":"프렌치 버드™(French Bud™)의 생명력을 담은 순한 수분 케어","Image":"images/product04.jpg"},
+        {"Name":"정샘물 미니 파잉 브이씨 앰플","Price":52000,"Descript":"피부 안색이 맑아지는 집중 케어 앰플","Image":"images/product05.jpg"},
+        {"Name":"정샘물 스킨 세팅 톤 매너 베이스","Price":52000,"Descript":"미백, 주름개선, 자외선 차단 기능성 화장품","Image":"images/product06.jpg"},
+        {"Name":"정샘물 스킨 세팅 톤업 선 베이스","Price":32000,"Descript":"자외선 차단 기능성 화장품핑크 톤업 SUN 베이스","Image":"images/product07.jpg"},
+        {"Name":"정샘물 에센셜 스킨 누더 쿠션","Price":42000,"Descript":"정샘물식 내추럴 스킨을 표현해주는 데일리 쿠션 파운데이션","Image":"images/product08.jpg"}
+    ]
+}

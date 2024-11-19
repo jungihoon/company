@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      a {
+        color: #333;
+        text-decoration: none;
+      }
+      ul {
+        list-style: none;
+      }
+
+      .gallery {
+        width: 600px;
+        height: 500px;
+        border: 3px solid red;
+        position: relative;
+        margin: 200px 0 0 200px;
+        overflow: hidden;
+      }
+
+      .gallery .pic {
+        overflow: hidden;
+        width: 2400px;
+        position: relative;
+        left: 0;
+        top: 0;
+      }
+      .gallery .pic li {
+        float: left;
+      }
+      .gallery img {
+        width: 600px;
+      }
+      .gallery .btn {
+        overflow: hidden;
+      }
+      .gallery .btn li {
+        float: left;
+        width: 25%;
+        height: 100px;
+      }
+      .gallery .btn li a {
+        display: block;
+        text-align: center;
+        padding: 30px 0;
+        transition: all 0.5s;
+      }
+      .gallery .btn li a:hover {
+        background: orange;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="gallery">
+      <ul class="pic">
+        <li><img src="./images/big1.jpg" alt="" /></li>
+        <li><img src="./images/big2.jpg" alt="" /></li>
+        <li><img src="./images/big3.jpg" alt="" /></li>
+        <li><img src="./images/big4.jpg" alt="" /></li>
+      </ul>
+
+      <ul class="btn">
+        <li><a href="#">click01</a></li>
+        <li><a href="#">click02</a></li>
+        <li><a href="#">click03</a></li>
+        <li><a href="#">click04</a></li>
+      </ul>
+    </div>
+
+    <script src="./js/jquery-1.7.1.min.js"></script>
+    <script>
+      var target = 0; //목적지
+      var imgw = $(".gallery .pic li").width(); //하나의 리스트의 너비를 리턴
+      //console.log(imgw);
+
+      $(".gallery .btn a").click(function (e) {
+        e.preventDefault();
+
+        var ind = $(this).index(".gallery .btn a"); // 0(*-600) 1(*-600) 2(*-600) 3(*-600)
+        target = -(imgw * ind); // 0 -600  -1200  -1800
+        $(".gallery .pic").animate({ left: target }, "slow").clearQueue();
+      });
+    </script>
+  </body>
+</html>

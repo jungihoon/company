@@ -1,0 +1,18 @@
+@charset "utf-8";
+/* CSS Document */
+*{margin:0; padding:0;}
+ul{list-style: none;}
+
+
+#slide_gallery_box{width:750px; margin: 100px 0 0 400px;
+        position:relative; border:3px solid #CCC; padding: 30px 0;}
+
+.slide_gallery{position:relative; left:0; top:0; width:1500px; overflow: hidden;}
+.slide_gallery ul{overflow: hidden;padding: 30px 0;}
+.slide_gallery ul li{float:left; transition: all .3s ease;}
+.sub_menu_box{width:70px;position:relative;left:340px; overflow: hidden;
+          top: 15px;}
+#slide_gallery_box .sub_menu_box .button{display: block;float: left;}
+#slide_gallery_box .sub_menu_box .m1{ margin-right:20px;}
+.big{transform: scale(1.2); box-shadow: 2px 2px 5px 1px rgba(0,0,0,.6);}
+

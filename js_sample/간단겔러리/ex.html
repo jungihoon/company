@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      a {
+        color: #333;
+        text-decoration: none;
+      }
+
+      ul {
+        list-style: none;
+      }
+
+      .gallery {
+        width: 400px;
+        padding: 15px;
+        border: 1px solid #ccc;
+        margin: 30px;
+      }
+
+      .gallery .image li {
+        display: none;
+      }
+
+      .gallery .btn {
+        overflow: hidden;
+      }
+
+      .gallery .btn li {
+        float: left;
+        width: 25%;
+      }
+
+      .gallery .btn li a {
+        display: block;
+        text-align: center;
+        padding: 10px 0;
+        transition: all 0.5s;
+      }
+    </style>
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".image li:eq(0)").fadeIn("slow");
+        $(".btn li:eq(0) a").css({
+          background: "orange",
+          color: "#fff",
+        });
+
+        $(".btn a").each(function (index) {
+          //console.log(index);   0 1 2 3
+          $(this).click(function (e) {
+            e.preventDefault();
+
+            $(".image li").hide();
+            $(".image li:eq(" + index + ")").fadeIn("slow");
+
+            $(".btn a").css({
+              background: "none",
+              color: "#333",
+            });
+
+            $(this).css({
+              background: "orange",
+              color: "#fff",
+            });
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="gallery">
+      <ul class="image">
+        <li><img src="./images/img1.jpg" alt="" /></li>
+        <li><img src="./images/img2.jpg" alt="" /></li>
+        <li><img src="./images/img3.jpg" alt="" /></li>
+        <li><img src="./images/img4.jpg" alt="" /></li>
+      </ul>
+
+      <ul class="btn">
+        <li><a href="#">이미지1</a></li>
+        <li><a href="#">이미지2</a></li>
+        <li><a href="#">이미지3</a></li>
+        <li><a href="#">이미지4</a></li>
+      </ul>
+    </div>
+  </body>
+</html>

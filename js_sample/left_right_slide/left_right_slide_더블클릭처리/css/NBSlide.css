@@ -1,0 +1,19 @@
+@charset "utf-8";
+/* CSS Document */
+*{margin:0; padding:0;}
+ul{list-style: none;}
+
+
+#slide_gallery_box{width:750px; margin: 100px 0 0 400px;
+        position:relative; border:3px solid #CCC; }
+
+.slide_gallery{position:relative; left:0; top:0; width:2100px; overflow: hidden;}
+.slide_gallery ul{float: left;}
+.slide_gallery ul li{float:left; width: 150px; height: 210px; }
+.slide_gallery ul .img1{background: orange;}
+.slide_gallery ul .img2{background: green;}
+
+.sub_menu_box{width:70px;position:relative;left:340px; overflow: hidden;}
+#slide_gallery_box .sub_menu_box .button{display: block;float: left;}
+#slide_gallery_box .sub_menu_box .m1{ margin-right:20px;}
+

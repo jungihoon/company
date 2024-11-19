@@ -1,0 +1,32 @@
+/* CSS Document */
+*{margin:0; padding:0}
+img{border:0; vertical-align:top}
+li{line-height:1.5em; list-style:none}
+
+
+.gallery_box{width:250px;height:305px; position:relative;font-size:12px;
+  border:1px solid #ccc;}
+.gallery_box h3{margin:0 0 20px 20px}
+
+.gallery_box .news1 li{background:#6C0}
+.gallery_box .news2 li{background:#F9F}
+.gallery_box .news3 li{background:#66F}
+
+.gallery_box li{width:230px;height:80px; margin-bottom:10px;
+    margin-left:10px} 
+
+ .gallery_box .num{ position:absolute; top:2px; right:25px}
+.gallery_box span{ display:block; width:35px; position:absolute; 
+          right:5px; top:0}
+.gallery_box span a{display:block; width:14px; height:16px;
+     text-indent:-9999px; overflow:hidden; float:left}
+.gallery_box span .leftBtn{ background:url(../images/left.jpg)}
+.gallery_box span .RightBtn{background:url(../images/right.jpg)}
+
+
+
+
+
+
+
+

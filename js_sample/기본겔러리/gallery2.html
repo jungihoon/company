@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      a {
+        color: #333;
+        text-decoration: none;
+      }
+      img {
+        border: 0;
+        vertical-align: top;
+      }
+
+      .gallery {
+        position: relative;
+        width: 800px;
+        background: #000;
+      }
+      .gallery .big {
+        width: 800px;
+        opacity: 0;
+        transition: all 1s;
+      }
+      .gallery ul {
+        overflow: hidden;
+        list-style: none;
+      }
+      .gallery li {
+        float: left;
+        margin: 10px;
+      }
+      .gallery li a {
+        display: block;
+        border: 3px solid rgba(255, 0, 0, 0);
+      }
+
+      .gallery .text {
+        position: absolute;
+        left: 0;
+        top: 250px;
+        text-align: center;
+        font-size: 30px;
+        color: #fff;
+        font-weight: bold;
+        width: 100%;
+      }
+      .gallery .text li {
+        display: none;
+        width: 100%;
+      }
+    </style>
+    <script src="./js/jquery-1.7.1.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".big").css("opacity", 1);
+        $(".gallery .btn li:eq(0) a")
+          .css("border", "3px solid rgba(255,0,0,1)")
+          .children()
+          .css("filter", "grayscale(100%)");
+
+        $(".text li:eq(0)").fadeIn(2000); //첫번째 글 보이기
+
+        $(".gallery .btn li a").click(function (e) {
+          e.preventDefault();
+          var ind = $(this).index(".gallery .btn li a");
+          //console.log(ind);
+
+          $(".big").attr("src", "./images/big" + (ind + 1) + ".jpg"); //클릭한 버튼에 해당하는 이미지로 교체
+          $(".big").hide().fadeIn("fast"); //페이지 효과
+
+          $(".gallery .btn li a")
+            .css("border", "3px solid rgba(255,0,0,0)")
+            .children()
+            .css("filter", "grayscale(0)");
+          $(this)
+            .css("border", "3px solid rgba(255,0,0,1)")
+            .children()
+            .css("filter", "grayscale(100%)");
+
+          $(".text li").hide(); //모든 텍스트 안보이게
+          $(".text li:eq(" + ind + ")").fadeIn(2000); //클릭한 버튼에 해당하는 텍스트만 보이게
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="gallery">
+      <img class="big" src="./images/big1.jpg" alt="" />
+      <ul class="text">
+        <li>
+          <p>내용글 01</p>
+        </li>
+        <li>
+          <p>내용글 02</p>
+        </li>
+        <li>
+          <p>내용글 03</p>
+        </li>
+        <li>
+          <p>내용글 04</p>
+        </li>
+      </ul>
+
+      <ul class="btn">
+        <li>
+          <a href="#"><img src="./images/small1.jpg" alt="" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="./images/small2.jpg" alt="" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="./images/small3.jpg" alt="" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="./images/small4.jpg" alt="" /></a>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

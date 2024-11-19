@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      a {
+        color: #333;
+        text-decoration: none;
+      }
+      ul {
+        list-style: none;
+      }
+
+      .gallery {
+        width: 600px;
+        height: 502px;
+        border: 3px solid red;
+        position: relative;
+      }
+      .gallery .box {
+        padding: 20px;
+      }
+      .gallery .box h4 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+      }
+      .gallery .box li {
+        display: none;
+      }
+      .gallery .img li {
+        display: none;
+      }
+      .gallery li img {
+        width: 600px;
+      }
+      .gallery a {
+        display: block;
+        width: 100px;
+        padding: 20px 0;
+        text-align: center;
+        font-size: 24px;
+        background: orange;
+        color: #fff;
+        position: absolute;
+        top: 250px;
+        opacity: 0.6;
+        transition: all 0.5s;
+      }
+      .gallery a:hover {
+        opacity: 1;
+      }
+      .gallery .prev {
+        left: 20px;
+      }
+      .gallery .next {
+        right: 20px;
+      }
+      .gallery span {
+        font-size: 30px;
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="gallery">
+      <div class="box">
+        <ul>
+          <li>
+            <h4>타이틀01</h4>
+            <p>내용01</p>
+          </li>
+          <li>
+            <h4>타이틀02</h4>
+            <p>내용02</p>
+          </li>
+          <li>
+            <h4>타이틀03</h4>
+            <p>내용03</p>
+          </li>
+          <li>
+            <h4>타이틀04</h4>
+            <p>내용04</p>
+          </li>
+        </ul>
+      </div>
+      <div class="img">
+        <ul>
+          <li><img src="./images/big1.jpg" alt="" /></li>
+          <li><img src="./images/big2.jpg" alt="" /></li>
+          <li><img src="./images/big3.jpg" alt="" /></li>
+          <li><img src="./images/big4.jpg" alt="" /></li>
+        </ul>
+      </div>
+      <a class="prev" href="#">prev</a>
+      <a class="next" href="#">next</a>
+      <span></span>
+    </div>
+
+    <script src="./js/jquery-1.7.1.min.js"></script>
+    <script>
+      var cnt = 0; // 0 1 2 3
+      var total = 0; //이미지의 총개수 4
+      $(".gallery .box li:eq(0)").fadeIn("slow");
+      $(".gallery .img li:eq(0)").fadeIn("slow"); //첫번째 이미지 보여라
+      total = $(".gallery .img li").size(); //총개수 4
+      $(".gallery span").text(cnt + 1 + "/" + total); // 1/4
+      //console.log(total);
+
+      $(".next").click(function () {
+        cnt++; // 0 1 2 3  0 1 2 3  0 1 2 3
+        if (cnt == total) {
+          cnt = 0;
+        }
+        $(".gallery .box li").hide(); // 다 보이지마~~
+        $(".gallery .box li:eq(" + cnt + ")").fadeIn("slow");
+
+        $(".gallery .img li").hide(); // 다 보이지마~~
+        $(".gallery .img li:eq(" + cnt + ")").fadeIn("slow"); //카운트에 해당하는 이미지만 보여라
+        $(".gallery span").text(cnt + 1 + "/" + total); // 이미지 카운트를 출력해라
+      });
+
+      $(".prev").click(function () {
+        cnt--; // 3 2 1 0   3 2 1 0   3 2 1 0
+        if (cnt == -1) {
+          cnt = total - 1;
+        }
+        $(".gallery .box li").hide(); //다 보이지마~~~
+        $(".gallery .box li:eq(" + cnt + ")").fadeIn("slow");
+
+        $(".gallery .img li").hide(); //다 보이지마~~~
+        $(".gallery .img li:eq(" + cnt + ")").fadeIn("slow"); //카운트에 해당하는 이미지만 보여
+        $(".gallery span").text(cnt + 1 + "/" + total); // 이미지 카운트를 출력해라
+      });
+    </script>
+  </body>
+</html>

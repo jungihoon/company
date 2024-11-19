@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      a {
+        color: #333;
+        text-decoration: none;
+      }
+      img {
+        border: 0;
+        vertical-align: top;
+      }
+
+      .gallery .con li {
+        width: 800px;
+        height: 500px;
+        background: green;
+        display: none;
+      }
+      .gallery ul {
+        overflow: hidden;
+        list-style: none;
+      }
+      .gallery li {
+        float: left;
+        margin: 10px;
+      }
+      .gallery li > img {
+        width: 500px;
+      }
+      .gallery .thum img {
+        border: 3px solid #fff;
+      }
+    </style>
+    <script src="./js/jquery-1.7.1.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".gallery .con li:first").fadeIn("fast");
+        $(".gallery .thum li:eq(0)").find("img").css("border-color", "#f00");
+
+        $(".gallery .thum a").click(function (e) {
+          e.preventDefault();
+          var ind = $(this).index(".gallery .thum a"); // 0 1 2 3
+
+          $(".gallery .con li").hide();
+          $(".gallery .con li:eq(" + ind + ")").fadeIn("fast");
+
+          $(".gallery .thum img").css("border-color", "#fff");
+          $(this).find("img").css("border-color", "#f00");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="gallery">
+      <ul class="con">
+        <li>
+          <h3>1.제목입니다</h3>
+          <p>1.내용입니다</p>
+          <img src="./images/big1.jpg" alt="" />
+        </li>
+        <li>
+          <h3>2.제목입니다</h3>
+          <p>2.내용입니다</p>
+          <img src="./images/big2.jpg" alt="" />
+        </li>
+        <li>
+          <h3>3.제목입니다</h3>
+          <p>3.내용입니다</p>
+          <img src="./images/big3.jpg" alt="" />
+        </li>
+        <li>
+          <h3>4.제목입니다</h3>
+          <p>4.내용입니다</p>
+          <img src="./images/big4.jpg" alt="" />
+        </li>
+      </ul>
+      <ul class="thum">
+        <li>
+          <a href="#"><img src="./images/small1.jpg" alt="" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="./images/small2.jpg" alt="" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="./images/small3.jpg" alt="" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="./images/small4.jpg" alt="" /></a>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

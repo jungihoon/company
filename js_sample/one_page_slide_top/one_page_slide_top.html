@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{margin: 0; padding: 0}
+        a{color: #333; text-decoration: none; display: block;}
+        
+        .wrap{width: 1000px; margin: 0 auto;
+            border: 1px solid red}
+        header{height: 100px; background: #f00}
+        .main{height: 150px; background: #0f0}
+        #content .slideMenu ul{display:flex; justify-content: center; list-style: none;}
+        #content .slideMenu ul li{width: 20%; text-align: center;}
+        #content .slideMenu ul li a{padding: 20px 0; font-size: 1.2em;}
+        #content .slideMenu ul li a:hover{background: orange; color: #fff;}
+        #content section{height: 1000px; background: #00f;
+             margin-bottom: 10px; font-size: 3em; color: #fff;}
+        
+        .topMove{display:block;padding: 20px; color:#fff;
+              background: #f00; border-radius:50%;
+             position: fixed; left:50%; margin-left: 500px; 
+               bottom:100px; 
+        }
+      
+        
+        footer{height: 100px; background: #ccc}
+        
+        .text{position: fixed; right: 0; top:0;
+            font-size: 30px}
+    </style>
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/slide_move.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <header>헤더영역</header>
+        <div class="main">비주얼영역</div>
+        <article id="content">
+            <div class="slideMenu">
+                <ul>
+                    <li><a class="link1" href="#">메뉴1</a></li>
+                    <li><a class="link2" href="#">메뉴2</a></li>
+                    <li><a class="link3" href="#">메뉴3</a></li>
+                    <li><a class="link4" href="#">메뉴4</a></li>
+                </ul>
+            </div>
+            
+            <section class="con1">본문1</section>
+            <section class="con2">본문2</section>
+            <section class="con3">본문3</section>
+            <section class="con4">본문4</section>
+            
+            <a class="topMove" href="#">top</a>
+        </article>
+        <footer>하단푸터영역</footer>
+        
+    </div>
+    
+    
+    <div class="text">0</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

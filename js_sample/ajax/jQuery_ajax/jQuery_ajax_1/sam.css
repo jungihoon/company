@@ -1,0 +1,22 @@
+/* base */
+*{ padding: 0; margin: 0; }
+ul{ list-style: none; }
+a{ text-decoration: none; }
+
+.product{width:1200px; margin: 50px auto; border: 2px solid #ccc;}
+.product h3{font-size: 50px; text-align: center; margin: 40px 0;}
+.product ul{overflow: hidden;}
+.product li{width: 25%; height: 400px; float: left; text-align: center;}
+.product li img{width: 200px;}
+.product li dl{width: 200px; margin: 15px auto;} 
+.product li dt{font-size:18px ; font-weight: bold; margin-bottom: 10px;}
+.product li dd{line-height: 1.5em;}
+
+
+
+
+
+
+
+
+

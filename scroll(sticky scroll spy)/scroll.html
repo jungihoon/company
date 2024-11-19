@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ol,
+      ul {
+        list-style: none;
+      }
+      a {
+        color: #333;
+        text-decoration: none;
+      }
+
+      #wrap {
+        width: 1000px;
+        margin: 0 auto;
+        overflow: hidden;
+      }
+
+      header {
+        height: 150px;
+        background: #0f0;
+        position: fixed;
+        width: 100%;
+        left: 0;
+        top: 0;
+        z-index: 50;
+      }
+      .main {
+        height: 200px;
+        background: orange;
+        margin-top: 150px;
+      }
+
+      .navBox {
+        background: #ccc;
+      }
+
+      .navBox nav {
+        width: 1000px;
+        margin: 0 auto;
+      }
+
+      .navBox ul {
+        overflow: hidden;
+      }
+
+      .navBox ul li {
+        float: left;
+        width: 25%;
+        text-align: center;
+      }
+
+      /* 상단에 고정 sticky menu */
+
+      .navOn {
+        position: fixed;
+        width: 100%;
+        z-index: 60;
+        left: 0;
+        top: 0;
+      }
+
+      .navBox ul li a {
+        display: block;
+        font-size: 2em;
+        font-weight: bold;
+        background: #ccc;
+        padding: 10px 0;
+        color: #333;
+        transition: all 0.8s;
+      }
+
+      /* 메뉴 활성화  scroll spy */
+      .navBox ul li a.spy {
+        background: #000;
+        color: #fff;
+      }
+
+      #content div {
+        position: relative;
+        /* top: 100px; */
+        opacity: 0;
+        /* transform: scale(0.5); */
+        transition: all 0.5s;
+      }
+
+      #content .sec1 {
+        height: 500px;
+        background: #f00;
+        transform: scale(0.2);
+      }
+
+      #content .sec2 {
+        height: 600px;
+        background: #0f0;
+        right: -100%;
+      }
+
+      #content .sec3 {
+        height: 400px;
+        background: #00f;
+        transform: translateY(200px);
+      }
+
+      #content .sec4 {
+        height: 500px;
+        background: pink;
+        transform: rotate(180deg);
+      }
+
+      /* scroll animation 최종값(목적지)  */
+      #content div.boxMove {
+        bottom: 0;
+        right: 0;
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      footer {
+        height: 150px;
+        background: #999;
+      }
+
+      .topMove {
+        display: block;
+        padding: 20px;
+        color: #fff;
+        background: #f00;
+        border-radius: 50%;
+        position: fixed;
+        left: 50%;
+        margin-left: 500px;
+        bottom: 100px;
+      }
+
+      .text {
+        position: fixed;
+        right: 0;
+        top: 0;
+        font-size: 50px;
+        z-index: 100;
+      }
+    </style>
+    <script src="jquery-1.8.3.min.js"></script>
+    <script src="./js/scroll.js"></script>
+  </head>
+  <body>
+    <div id="wrap">
+      <header>헤더영역</header>
+      <div class="main">메인 비주얼영역</div>
+      <div class="container">
+        <div class="navBox">
+          <nav class="subNav">
+            <ul>
+              <li><a class="link1" href="#">MENU01</a></li>
+              <li><a class="link2" href="#">MENU02</a></li>
+              <li><a class="link3" href="#">MENU03</a></li>
+              <li><a class="link4" href="#">MENU04</a></li>
+            </ul>
+          </nav>
+        </div>
+        <article id="content">
+          <div class="sec1">본문1</div>
+          <div class="sec2">본문2</div>
+          <div class="sec3">본문3</div>
+          <div class="sec4">본문4</div>
+        </article>
+      </div>
+      <footer>
+        <a class="topMove" href="#">top</a>
+        푸터영역
+      </footer>
+    </div>
+
+    <div class="text">0</div>
+  </body>
+</html>
