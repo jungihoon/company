@@ -8,7 +8,7 @@
 }
 
 .swiper-wrapper li::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -151,13 +151,10 @@
   padding: 60px 40px;
   overflow: hidden;
   box-sizing: border-box;
+  transition: width 0.3s ease-in-out;
 }
 #content .business_box .business_content li:nth-child(1) {
   background: url(https://harimholdings.com/img/main/img_esg_01_1.png) no-repeat center / cover;
-}
-
-content .business_box .business_content li:nth-child(1) h4 {
-  margin-bottom: 30px;
 }
 #content .business_box .business_content li:nth-child(2) {
   background: url(https://harimholdings.com/img/main/img_esg_01_2.png) no-repeat center / cover;
@@ -165,6 +162,9 @@ content .business_box .business_content li:nth-child(1) h4 {
 #content .business_box .business_content li:nth-child(3) {
   background: url(https://harimholdings.com/img/main/img_esg_01_3.png) no-repeat center / cover;
 }
+/* content .business_box .business_content li:nth-child(1) h4 {
+  margin-bottom: 30px;
+} */
 #content .business_box .business_content li a {
   position: relative;
   width: 100%;
@@ -173,42 +173,74 @@ content .business_box .business_content li:nth-child(1) h4 {
   padding: 14px;
 }
 
-#content .business_box .business_content li a .desc {
+#content .business_box .business_content li .desc {
   position: absolute;
   bottom: -155px;
   line-height: 1.2;
-  transition: all 0.6s;
+  transition: all 0.6s ease;
   color: #fff;
 }
 
-#content .business_box .business_content li a .desc em {
+#content .business_box .business_content li .desc em {
   font-size: 1.25rem;
   font-weight: 500;
   letter-spacing: -0.02em;
-  transition: all 0.4s ease;
+  transition: all 0.1s ease;
 }
-#content .business_box .business_content li a .desc h4 {
+#content .business_box .business_content li .desc h4 {
   font-size: 3.125rem;
   font-weight: 700;
-
-  margin-bottom: 77px;
+  margin-bottom: 40px;
+  color: #fff;
 }
-#content .business_box.business_content li a .desc p {
-  font-size: 1.25rem;
+#content .business_box .business_content li .desc p {
+  font-size: 1.3rem;
   line-height: 1.6;
   white-space: nowrap;
   margin-top: 30px;
   transition: all 0.4s ease;
 }
-#content .business_box .business_content li a .icon {
+#content .business_box .business_content li .icon {
   height: 60px;
   position: absolute;
   right: -65px;
   bottom: 20px;
   transition: all 0.4s ease;
 }
+#content .business_box .business_content li.active {
+  width: 730px;
+}
 
-#content .business_box .business_content li:hover .desc,
+#content .business_box .business_content li.inactive {
+  width: 310px;
+}
+
+#content .business_box .business_content li.active .desc,
+#content .business_box .business_content li.active .desc * {
+  transition-delay: 0.1s;
+  transform: translateY(-100%);
+}
+
+#content .business_box .business_content li.active .desc h4 {
+  /* margin-bottom: 100px; */
+  line-height: 1.2;
+  transition: all 0.6s;
+}
+
+#content .business_box .business_content li.active .desc p {
+  width: 500px;
+  transform: translateY(-10%);
+}
+
+#content .business_box .business_content li.active .desc em {
+  opacity: 0;
+  transform: translateY(-1400%);
+}
+#content .business_box .business_content li.active .icon {
+  right: 30px;
+  transition-delay: 0.28s;
+}
+/* #content .business_box .business_content li:hover .desc,
 #content .business_box .business_content li:hover .desc * {
   transition-delay: 0.1s;
   transform: translateY(-160%);
@@ -237,7 +269,7 @@ content .business_box .business_content li:nth-child(1) h4 {
 #content .business_box .business_content li:hover .icon {
   right: 30px;
   transition-delay: 0.28s;
-}
+} */
 
 .skill {
   width: 100%;
@@ -279,7 +311,7 @@ content .business_box .business_content li:nth-child(1) h4 {
   transition: opacity 0.3s ease;
 }
 .skill .container .menu .skill_list li a:before {
-  content: "";
+  content: '';
   display: block;
   width: 0;
   height: 4px;
@@ -385,7 +417,7 @@ content .business_box .business_content li:nth-child(1) h4 {
   margin: 0 15px;
 }
 .skill .container .items .item .desc .paging:before {
-  content: "";
+  content: '';
   display: block;
   width: 20px;
   height: 2px;
@@ -500,7 +532,7 @@ content .business_box .business_content li:nth-child(1) h4 {
 
 .investment .container .investment_right .price span {
   display: block;
-  font-family: "Noto Sans KR2";
+  font-family: 'Noto Sans KR2';
   color: #318fcb;
   font-size: 1.3rem;
 }
@@ -678,7 +710,7 @@ content .business_box .business_content li:nth-child(1) h4 {
   z-index: 2;
 }
 #content .recruit .hiring .link_box a:after {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -765,8 +797,8 @@ content .business_box .business_content li:nth-child(1) h4 {
 }
 
 /* Swiper */
-@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css");
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
 body,
 html {
@@ -803,8 +835,8 @@ a {
 
 :root {
   --primary: #104971;
-  --k-font: "Pretendard";
-  --e-font: "Outfit";
+  --k-font: 'Pretendard';
+  --e-font: 'Outfit';
 }
 
 #mainVisual {
@@ -948,7 +980,7 @@ a {
 }
 #mainVisual .circle .play span {
   cursor: pointer;
-  font-variation-settings: "FILL" 1, "wght" 300, "GRAD" 0, "opsz" 40;
+  font-variation-settings: 'FILL' 1, 'wght' 300, 'GRAD' 0, 'opsz' 40;
   font-size: 18px;
 }
 #mainVisual .circle .play div.swiper-pause {
