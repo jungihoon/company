@@ -78,6 +78,15 @@
   font-weight: 600;
   margin-bottom: 200px;
   color: #222;
+  position: relative;
+}
+
+#content .content_area .content_top .content_top_left h4::before {
+  content: "\201C";
+  position: absolute;
+  top: -64px;
+  color: #107af2;
+  line-height: 72px;
 }
 
 #content .content_area .content_top .content_top_left p {
