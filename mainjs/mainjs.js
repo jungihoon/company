@@ -134,7 +134,6 @@ $(document).ready(function () {
     // }
 
     timeonoff = setInterval(moveg, 4000); //부활
-
     if (onoff == false) {
       onoff = true;
       $(".ps").html('<span class="hidden">stop</span><i class="fa-regular fa-circle-stop"></i>');

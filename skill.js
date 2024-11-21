@@ -1,27 +1,32 @@
 document.addEventListener("DOMContentLoaded", function () {
   // 메뉴 항목과 아이템 섹션의 각 div 선택
   const menus = document.querySelectorAll(".skill_link li a");
-  const items = document.querySelectorAll(".items > div");
-  const container = document.querySelector(".container");
-
-  // 초기 설정: 첫 번째 메뉴 항목과 아이템에 active, on 클래스 추가
-  menus[0].classList.add("active");
+  const items = document.querySelectorAll(".items .item");
+  const texts = document.querySelectorAll(".tit_items .tit_item");
+  //처음 화면ㅇㅔ 보이는거
   items[0].classList.add("on");
-  container.classList.add("active");
+  texts[0].classList.add("on");
+
+  //menus를 누르면  items, texts가 바뀌게
+
+  // for (var index = 0; index < menus.length; index++) {
+  //   var menu = menus[index];
+  //}
 
   menus.forEach((menu, index) => {
-    menu.addEventListener("click", () => {
-      // 모든 아이템에서 on 클래스 제거
-      items.forEach((item) => item.classList.remove("on"));
-      // 모든 메뉴 항목에서 active 클래스 제거
-      menus.forEach((el) => el.classList.remove("active"));
+    //=>   == function(){
 
-      // 현재 클릭된 항목과 매칭되는 아이템에 on 클래스 추가
+    menu.addEventListener("click", () => {
+      //모든 아이템들 활성화 제거
+      items.forEach((item) => {
+        item.classList.remove("on");
+      });
+
+      texts.forEach((text) => {
+        text.classList.remove("on");
+      });
       items[index].classList.add("on");
-      // 현재 메뉴 항목에 active 클래스 추가
-      menu.classList.add("active");
-      // container에 active 클래스 추가
-      container.classList.add("active");
+      texts[index].classList.add("on");
     });
   });
 });
