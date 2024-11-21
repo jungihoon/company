@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   // 메뉴 항목과 아이템 섹션의 각 div 선택
-  const menus = document.querySelectorAll(".skill_list li a");
+  const menus = document.querySelectorAll(".skill_link li a");
   const items = document.querySelectorAll(".items > div");
   const container = document.querySelector(".container");
 

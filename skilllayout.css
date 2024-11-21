@@ -1,5 +1,8 @@
 @charset "utf-8";
 
+/* body {
+  background: red;
+} */
 .visual {
   width: 2000px;
   margin: 0 auto;
@@ -281,7 +284,7 @@
   background: #f8f8f8;
 }
 
-.skill .skill_wrap .container .menu ul img {
+.skill .skill_wrap .container .skill_nav ul img {
   width: 190px;
   height: 110px;
 }
@@ -294,21 +297,21 @@
   margin: 0 auto;
 }
 
-.skill .container .menu {
+.skill .container .skill_nav {
   width: 700px;
   display: flex;
 }
-.skill .container .menu .skill_list {
+.skill .container .skill_nav .skill_link {
   position: absolute;
   bottom: 0;
   left: 0;
   gap: 10px;
   display: flex;
 }
-.skill .container .menu .skill_list li {
+.skill .container .skill_nav .skill_link li {
   margin: 10px 0 0 0;
 }
-.skill .container .menu .skill_list li a {
+.skill .container .skill_nav .skill_link li a {
   position: relative;
   display: inline-block;
   color: #333;
@@ -322,7 +325,7 @@
   transition: opacity 0.3s ease;
 }
 
-/* .skill .container .menu .skill_list li a:before {
+/* .skill .container .skill_nav .skill_link li a:before {
   content: "";
   display: block;
   width: 0;
@@ -334,15 +337,15 @@
   transition: 0.4s ease-out;
 } */
 
-.skill .container .menu .skill_list li a.active {
+.skill .container .skill_nav .skill_link li a.active {
   font-size: 1.5rem;
   font-weight: 700;
   color: #ff3300;
 }
-.skill .container .menu .skill_list li a.active:before {
+.skill .container .skill_nav .skill_link li a.active:before {
   width: 100%;
 }
-.skill .container .menu .skill_list li a i {
+.skill .container .skill_nav .skill_link li a i {
   font-size: 1.3rem;
   vertical-align: 3px;
 }
@@ -1068,4 +1071,8 @@ a {
     top: 90%;
     opacity: 0;
   }
+}
+
+.skill_nav .tit_items .tit_item {
+  opacity: 0;
 }
