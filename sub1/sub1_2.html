@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../common/css/common.css" />
     <link rel="stylesheet" href="./common/css/sub1_2common.css" />
     <link rel="stylesheet" href="./css/sub1_2content.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
     <div class="skipNav">
@@ -92,7 +93,7 @@
       </header>
       <!-- 글자만 바꾸기 -->
 
-      <div class="sub_visual">
+      <div id="mainVisual">
         <img src="./images/content1/sub_visual.jpg" alt="서브비주얼이미지" />
         <strong>회사소개</strong>
       </div>
@@ -118,16 +119,14 @@
                 <li><a class="link1" href="#">2023~2020</a></li>
                 <li><a class="link2" href="#">2020~2010</a></li>
                 <li><a class="link3" href="#">2010~2000</a></li>
-                <li><a class="link4" href="#">2000~1990</a></li>
-                <li><a class="link5" href="#">1990~1980</a></li>
-                <li><a class="link6" href="#">1980~1970</a></li>
+                <li><a class="link4" href="#">2000~1970</a></li>
               </ul>
             </div>
             <div class="history_img">
               <img src="./images/content1/history.jpg" alt="" />
             </div>
             <div class="history">
-              <div class="his2020s" data-aos="fade-up" data-aos-delay="300">
+              <div class="his2020s">
                 <h3 class="hidden">2020's</h3>
 
                 <div class="his_2023 array" data-aos="fade-right">
@@ -167,7 +166,7 @@
                   </ul>
                 </div>
               </div>
-              <div class="his2010s" data-aos="fade-up" data-aos-delay="300">
+              <div class="his2010s">
                 <h3 class="hidden">2010's</h3>
 
                 <div class="his_2019 array" data-aos="fade-right">
@@ -267,7 +266,7 @@
                   </ul>
                 </div>
               </div>
-              <div class="his2000s" data-aos="fade-up" data-aos-delay="300">
+              <div class="his2000s">
                 <h3 class="hidden">2000's</h3>
                 <div class="his_2009 array" data-aos="fade-right">
                   <span>2009</span>
@@ -352,7 +351,7 @@
                   </ul>
                 </div>
               </div>
-              <div class="his1990s" data-aos="fade-up" data-aos-delay="300">
+              <div class="his1990s">
                 <h3 class="hidden">1990's</h3>
 
                 <div class="his_1999 array" data-aos="fade-right">
@@ -390,7 +389,7 @@
                   </ul>
                 </div>
               </div>
-              <div class="his1980s" data-aos="fade-up" data-aos-delay="300">
+              <div class="his1980s">
                 <h3 class="hidden">1980's</h3>
 
                 <div class="his_1988 array" data-aos="fade-right">
@@ -421,7 +420,7 @@
                   </ul>
                 </div>
               </div>
-              <div class="his1970s" data-aos="fade-up" data-aos-delay="300">
+              <div class="his1970s">
                 <h3 class="hidden">1970's</h3>
 
                 <div class="his_1977 array" data-aos="fade-right">
@@ -500,5 +499,12 @@
     <script src="../common/js/common.js"></script>
     <script src="../mainjs/mainjs.js"></script>
     <script src="./js/sub1_2content.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+      AOS.init({
+        easing: "ease-in-out-sine",
+      });
+    </script>
   </body>
 </html>

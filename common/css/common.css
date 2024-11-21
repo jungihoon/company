@@ -436,8 +436,8 @@ font-family: "Roboto", sans-serif;
   left: 50%;
   margin-left: 750px;
   bottom: 150px;
-  border-radius: 50%;
-  z-index: 50; */
+  border-radius: 50%;*/
+  z-index: 10000;
 }
 
 #footerArea .move .top_move {
