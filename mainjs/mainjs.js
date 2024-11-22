@@ -220,7 +220,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   //menus를 누르면  items, texts가 바뀌게
 
-  // for (i = 0; i <  menus.length; i++) {
+  // for (index = 0; index <  menus.length; index++) {
   //   var menu = menus[index];
   //}
 

@@ -107,7 +107,7 @@
 }
 
 #content section .title {
-  margin: 100px 0 50px 0;
+  margin: 100px auto 50px;
 }
 
 #content section .title h3 {
@@ -658,11 +658,7 @@
   border-radius: 100px;
   color: #318fcb;
   text-align: center;
-  line-height: 2rem;
-  padding: 10px;
-  display: flex;
-  justify-content: center;
-  overflow: hidden;
+  padding: 15px;
   transition: all 0.3s ease-out;
   font-size: 1.1rem;
   font-weight: 500;
@@ -830,22 +826,34 @@
 /* .investment 센션 hover 추가 */
 
 #content .news {
-  width: 1700px;
+  width: 1400px;
   margin: 150px auto;
-  display: flex;
-  gap: 50px;
 }
 
 .news .title {
-  width: 300px;
+  width: 1400px;
   margin-right: 80px;
   margin-bottom: 100px;
 }
+
+.news .title .more {
+  width: 160px;
+  border: 1px solid #318fcb;
+  border-radius: 100px;
+  color: #318fcb;
+  text-align: center;
+  line-height: 2rem;
+  padding: 10px;
+
+  font-size: 1.1rem;
+  font-weight: 500;
+}
 #content .news .title h3 {
-  text-align: left;
+  text-align: center;
 }
 #content .news .title p {
-  text-align: justify;
+  text-align: center;
+  width: 1400px;
   margin-bottom: 30px;
   font-size: 1.5rem;
   line-height: 2rem;
