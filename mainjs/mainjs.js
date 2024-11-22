@@ -183,29 +183,11 @@ window.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-//사업소개
+//  사업소개
 
 var origin = 450; //li의 원래 너비값
 var min_width = 310; ////작아졌을때 사이즈
 var max_width = 730; //li에 마우스 엔터 되었을때
-
-// $(".business_box li").hover(
-//   //마우스 엔터 시
-//   function () {
-//     $(".business_box .business_content li").animate({ width: min_width }, 300).clearQueue();
-//     $(this).animate({ width: max_width }, 300).clearQueue();
-//     // $(this).find("dt").css({ "margin-top": "100px", color: "orange", "font-size": "1.8em" });
-//     // $(this).find("dd").css({ opacity: "1", transition: "all .3s", "transition-delay": ".3s" });
-//     // $(this).find("dl").css("background", "rgba(0,0,0,.6)");
-//   },
-//   function () {
-//     // 마우스 리브 시
-//     $(".business_box .business_content li").animate({ width: origin }, 300).clearQueue();
-//     // $(this).find("dt").css({ "margin-top": "200px", color: "#fff", "font-size": "1.5em" });
-//     // $(this).find("dd").css({ opacity: "0", transition: "none" });
-//     // $(this).find("dl").css("background", "none");
-//   }
-// );
 
 $(function () {
   const $businessItems = $(".business_box .business_content li");
@@ -221,5 +203,48 @@ $(function () {
   $businessContainer.on("mouseleave", function () {
     $businessItems.removeClass("active inactive");
     console.log("mouseleave from all li");
+  });
+});
+
+//          기술개발
+
+document.addEventListener("DOMContentLoaded", function () {
+  // 메뉴 항목과 아이템 섹션의 각 div 선택
+  const menus = document.querySelectorAll(".skill_link li a");
+  const items = document.querySelectorAll(".items .item");
+  const texts = document.querySelectorAll(".tit_items .tit_item");
+
+  //처음 화면ㅇㅔ 보이는거
+  items[0].classList.add("on");
+  texts[0].classList.add("on");
+
+  //menus를 누르면  items, texts가 바뀌게
+
+  // for (i = 0; i <  menus.length; i++) {
+  //   var menu = menus[index];
+  //}
+
+  menus.forEach((menu, index) => {
+    //=>  ==  function(){
+    menu.addEventListener("click", () => {
+      //모든 아이템들 활성화 제거
+
+      items.forEach((item) => {
+        item.classList.remove("on");
+      });
+
+      texts.forEach((text) => {
+        text.classList.remove("on");
+      });
+
+      menus.forEach((menu) => {
+        menu.classList.remove("active");
+      });
+
+      //클릭한 메뉴 내용 동작
+      items[index].classList.add("on");
+      texts[index].classList.add("on");
+      menu.classList.add("active");
+    });
   });
 });
