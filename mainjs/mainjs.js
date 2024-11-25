@@ -184,12 +184,13 @@ window.addEventListener("DOMContentLoaded", function () {
 });
 
 //  사업소개
+const origin = 450; //li의 원래 너비값
 
-var origin = 450; //li의 원래 너비값
-var min_width = 310; ////작아졌을때 사이즈
-var max_width = 730; //li에 마우스 엔터 되었을때
+const min_width = 310; ////작아졌을때 사이즈
 
-$(function () {
+const max_width = 730; //li에 마우스 엔터 되었을때
+
+$(() => {
   const $businessItems = $(".business_box .business_content li");
   const $businessContainer = $(".business_box .business_content");
 
@@ -208,7 +209,7 @@ $(function () {
 
 //          기술개발
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
   // 메뉴 항목과 아이템 섹션의 각 div 선택
   const menus = document.querySelectorAll(".skill_link li a");
   const items = document.querySelectorAll(".items .item");

@@ -605,32 +605,6 @@
 
     <script src="./common/js/common.js"></script>
     <script src="./mainjs/mainjs.js"></script>
-    <!--사업소개 -->
-    <!-- <script>
-      var origin = 300; //li의 원래 너비값
-      var min_width = 250; ////작아졌을때 사이즈
-      var max_width = 400; //li에 마우스 엔터 되었을때
-
-      $(".business_box li").hover(
-        //마우스 엔터 시
-        function () {
-          $(".business_box li").animate({ width: min_width }, 300).clearQueue();
-          $(this).animate({ width: max_width }, 300).clearQueue();
-          $(this).find("dt").css({ "margin-top": "100px", color: "orange", "font-size": "1.8em" });
-          $(this)
-            .find("dd")
-            .css({ opacity: "1", transition: "all .3s", "transition-delay": ".3s" });
-          $(this).find("dl").css("background", "rgba(0,0,0,.6)");
-        },
-        function () {
-          // 마우스 리브 시
-          $(".business_box li").animate({ width: origin }, 300).clearQueue();
-          $(this).find("dt").css({ "margin-top": "200px", color: "#fff", "font-size": "1.5em" });
-          $(this).find("dd").css({ opacity: "0", transition: "none" });
-          $(this).find("dl").css("background", "none");
-        }
-      );
-    </script> -->
 
     <!--  -->
     <script>
@@ -663,49 +637,6 @@
       });
     </script>
 
-    <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-    <!-- Initialize Swiper -->
-    <!-- <script>
-      const progressCircle = document.querySelector("#mainVisual .autoplay-progress svg");
-
-      const progressContent = document.querySelector("#mainVisual .autoplay-progress span");
-
-      var mainSwiper = new Swiper(".main_slide", {
-        loop: true,
-        speed: 1200,
-        parallax: true,
-        slideActiveClass: "on",
-        autoplay: {
-          delay: 3200,
-          disableOnInteraction: false,
-        },
-        pagination: {
-          el: "#mainVisual .pager",
-          type: "fraction",
-        },
-        navigation: {
-          nextEl: "#mainVisual .next",
-          prevEl: "#mainVisual .prev",
-        },
-        on: {
-          autoplayTimeLeft(s, time, progress) {
-            progressCircle.style.setProperty("--progress", 1 - progress);
-          },
-        },
-      });
-      $("#mainVisual .swiper-pause").click(function () {
-        mainSwiper.autoplay.stop();
-      });
-      $("#mainVisual .swiper-play").click(function () {
-        mainSwiper.autoplay.start();
-      });
-      $(function () {
-        $("#mainVisual .play").click(function () {
-          $(this).toggleClass("on");
-        });
-      });
-    </script> -->
   </body>
 </html>

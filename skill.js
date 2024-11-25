@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
   // 메뉴 항목과 아이템 섹션의 각 div 선택
   const menus = document.querySelectorAll(".skill_link li a");
   const items = document.querySelectorAll(".items .item");
@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   //menus를 누르면  items, texts가 바뀌게
 
-  // for (i = 0; i <  menus.length; i++) {
+  // for (index = 0; index <  menus.length; index++) {
   //   var menu = menus[index];
   //}
 
@@ -38,7 +38,3 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
-
-const person = { name: "전기훈" };
-person.age = 29;
-console.log(person);
