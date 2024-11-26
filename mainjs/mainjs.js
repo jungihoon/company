@@ -1,4 +1,4 @@
-// // JavaScript Document
+// JavaScript Document
 
 $(document).ready(function () {
   var timeonoff; //타이머 처리  홍길동 정보
@@ -218,6 +218,7 @@ document.addEventListener("DOMContentLoaded", () => {
   //처음 화면ㅇㅔ 보이는거
   items[0].classList.add("on");
   texts[0].classList.add("on");
+  menus[0].classList.add("active");
 
   //menus를 누르면  items, texts가 바뀌게
 
@@ -247,5 +248,26 @@ document.addEventListener("DOMContentLoaded", () => {
       texts[index].classList.add("on");
       menu.classList.add("active");
     });
+  });
+
+  $(document).ready(function () {
+    /*숫자 자동입력*/
+
+    var memberCountConTxt = 40; //출력하고 싶은 최종값
+
+    $({ val: 0 }).animate(
+      { val: memberCountConTxt },
+      {
+        duration: 2000,
+        step: function () {
+          var number = Math.floor(this.val);
+          $(".count1").text(number);
+        },
+        complete: function () {
+          var number = Math.floor(this.val);
+          $(".count1").text(number);
+        },
+      }
+    );
   });
 });
