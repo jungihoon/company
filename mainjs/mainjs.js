@@ -209,6 +209,25 @@ $(() => {
 
 //          기술개발
 
+var memberCountConTxt = 40; //출력하고 싶은 최종값
+function cnt_per() {
+  $({ val: 0 }).animate(
+    { val: memberCountConTxt },
+    {
+      duration: 2000,
+      step: function () {
+        var number = Math.floor(this.val);
+        $(".count1").text(number);
+      },
+      complete: function () {
+        var number = Math.floor(this.val);
+        $(".count1").text(number);
+      },
+    }
+  );
+}
+cnt_per();
+
 document.addEventListener("DOMContentLoaded", () => {
   // 메뉴 항목과 아이템 섹션의 각 div 선택
   const menus = document.querySelectorAll(".skill_link li a");
@@ -247,27 +266,8 @@ document.addEventListener("DOMContentLoaded", () => {
       items[index].classList.add("on");
       texts[index].classList.add("on");
       menu.classList.add("active");
+
+      cnt_per();
     });
-  });
-
-  $(document).ready(function () {
-    /*숫자 자동입력*/
-
-    var memberCountConTxt = 40; //출력하고 싶은 최종값
-
-    $({ val: 0 }).animate(
-      { val: memberCountConTxt },
-      {
-        duration: 2000,
-        step: function () {
-          var number = Math.floor(this.val);
-          $(".count1").text(number);
-        },
-        complete: function () {
-          var number = Math.floor(this.val);
-          $(".count1").text(number);
-        },
-      }
-    );
   });
 });
