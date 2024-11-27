@@ -203,6 +203,9 @@
   margin-top: 30px;
   transition: all 0.4s ease;
 }
+
+#content .business_box .business_content li .desc .count1 {
+}
 #content .business_box .business_content li .icon {
   height: 60px;
   position: absolute;
@@ -659,12 +662,15 @@
   font-style: normal;
   font-weight: 700;
 }
-
-.s-contents .s-inner .items .item.on .desc .count1 {
-  margin-left: 70px;
+.s-contents .s-inner .items .item.on .desc p span:nth-of-type(1) {
+  padding-right: 70px;
 }
 
-.more {
+/* .s-contents .s-inner .items .item.on .desc .count1 {
+  margin-left: 70px;
+} */
+
+.s-contents .more {
   position: absolute;
   bottom: 220px;
   left: 0;
@@ -679,7 +685,7 @@
   font-weight: 500;
 }
 
-.more:hover {
+.s-contents .more:hover {
   background: #318fcb;
   color: #fff;
   font-size: 1.1rem;
@@ -841,27 +847,29 @@
 /* .investment 센션 hover 추가 */
 
 #content .news {
-  width: 1400px;
+  width: 100%;
   margin: 150px auto;
 }
 
 .news .title {
   width: 1400px;
-  margin-right: 80px;
-  margin-bottom: 100px;
+  margin: 0 auto 100px;
+  position: relative;
+}
+
+.news .swiper2 {
+  width: 1400px;
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+  padding-bottom: 60px;
 }
 
 .news .title .more {
-  width: 160px;
-  border: 1px solid #318fcb;
-  border-radius: 100px;
-  color: #318fcb;
-  text-align: center;
-  line-height: 2rem;
-  padding: 10px;
-
-  font-size: 1.1rem;
-  font-weight: 500;
+  position: absolute;
+  right: 40px;
+  top: 92px;
+  font-size: 3.3rem;
 }
 
 #content .news .title h3 {
@@ -876,13 +884,17 @@
   line-height: 2rem;
 }
 
-.news .news_cover {
-  display: flex;
-  justify-content: space-between;
+.news .swiper-slide {
+  width: 330px;
+}
+
+.news .swiper-wrapper li::before {
+  content: "";
+  display: none;
 }
 
 .news .news_cover img {
-  width: 300px;
+  width: 330px;
   height: 541px;
   object-fit: cover;
   transition: all 0.5s ease-out;
@@ -890,18 +902,17 @@
 
 .news .news_cover li:hover img {
   transform: scale(1.1);
-  filter: grayscale(100%);
 }
 
 #content .news .news_cover li {
-  width: 300px;
+  width: 330px;
   height: 541px;
   position: relative;
   overflow: hidden;
 }
 
 #content .news_cover dl {
-  width: 300px;
+  width: 330px;
   height: 100px;
   position: absolute;
   left: 0;
@@ -1088,7 +1099,7 @@
 /* Swiper */
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css");
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
-
+/* 
 body,
 html {
   height: 100%;
@@ -1114,7 +1125,7 @@ li {
 a {
   text-decoration: none;
 }
-*,
+
 :after,
 :before {
   -webkit-box-sizing: border-box;
@@ -1126,7 +1137,7 @@ a {
   --primary: #104971;
   --k-font: "Pretendard";
   --e-font: "Outfit";
-}
+} */
 
 #mainVisual {
   overflow: hidden;
