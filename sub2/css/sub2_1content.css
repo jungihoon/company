@@ -101,7 +101,6 @@
 
 #content .content_area .main_content .conlist .con_img {
   visibility: hidden;
-  /* transition: all 0.5s ease-out; */
 }
 
 #content .main_content .conlist .con_img .on {
