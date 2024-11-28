@@ -1,68 +1,25 @@
 @charset "utf-8";
 
-/* 비주얼 공통 */
-.sub_visual {
-  width: 2000px;
-  height: 400px;
-  background: url();
-  position: relative;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.sub_visual strong {
-  font-size: 30px;
-  color: #fff;
-  position: absolute;
+/* 인사말 페이지 내용영역 */
+.content_area {
   width: 100%;
-  text-align: center;
-  top: 200px;
-  left: 0;
 }
-
-/* 서브네비 공통 */
-.sub_nav {
-  width: 2000px;
-  border-bottom: 1px solid #ccc;
-  margin: 0 auto;
-}
-.sub_nav ul {
-  width: 1200px;
-  margin: 0 auto;
-
-  display: flex;
-}
-.sub_nav ul li {
-  width: 25%;
-  text-align: center;
-  box-sizing: border-box;
-}
-.sub_nav ul li a {
-  font-size: 1.2rem;
-  font-weight: bold;
-  padding: 20px 0;
-}
-.sub_nav ul li a.current {
-  color: #318fcb;
-  /* background: #318fcb; */
-  border-bottom: 3px solid #318fcb;
-}
-
-/* title_area 공통 */
-#content {
-  /* margin: 0 auto; */
+.wrap {
   overflow: hidden;
-  /* color: #fff; */
+  width: 100%;
+}
+#content {
+  overflow: hidden;
   width: 100%;
 }
 #content .title_area {
   width: 1400px;
+  height: 700px;
   margin: 0 auto;
-  /* background: pink; */
   position: relative;
   overflow: hidden;
 }
+
 #content .title_area .line_map {
   position: absolute;
   right: 15px;
@@ -81,19 +38,103 @@
   margin-bottom: 100px;
 }
 
+#content .title_area p::after {
+  content: "";
+  display: block;
+  background: #318fcb;
+  width: 3px;
+  height: 150px;
+  position: absolute;
+  left: 50%;
+  top: 450px;
+}
+
 #content .content_area {
   width: 2000px;
-  color: #fff;
-  background: linear-gradient(180deg, #121212 0%, #425ae3 100%);
   margin: 0 auto;
   padding-top: 50px;
 }
-#content .content_area .content_top {
+#content .content_area .content_top .content_top_txt {
+  width: 1400px;
+  margin: 0 auto;
+}
+
+#content .content_area .content_top .content_top_txt p {
+  width: 1400px;
+  font-size: 3rem;
+  text-align: center;
+  margin: 50px auto;
+  font-weight: 500;
+}
+
+#content .content_area .content_top .content_top_txt span {
+  width: 1400px;
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 2.3rem;
+}
+
+#content .content_area .main_content {
+  width: 2000px;
+  position: relative;
+}
+
+#content .content_area .main_content .con_img {
+  width: 2000px;
+  height: 700px;
+  position: absolute;
+  /* background: black; */
+}
+
+#content .content_area .main_content .con_img li a img {
+  width: 2000px;
+  height: 700px;
+  margin: 0 auto;
+  position: absolute;
+}
+
+#content .content_area .main_content .conlist {
+  width: 2000px;
+  height: 700px;
+  margin: 100px auto;
+}
+
+#content .content_area .main_content .conlist .con_img {
+  visibility: hidden;
+  /* transition: all 0.5s ease-out; */
+}
+
+#content .main_content .conlist .con_img .on {
+  visibility: visible;
+  /* transition: all 0.5s ease-out; */
+}
+#content .content_area .main_content .con_nav {
+  height: 700px;
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 350px;
+  font-size: 2rem;
+  flex-direction: column;
+  justify-content: center;
+  background: #ccc;
+}
+#content .content_area .main_content .con_nav li {
+  margin: 50px 0;
+}
+#content .content_area .main_content .con_nav li a {
+  color: #333;
+  height: 100px;
+  line-height: 100px;
+}
+#content .content_area .main_content .con_nav li a .on {
+  transition: all 0.5s ease-out;
+}
+/* #content .content_area .content_top {
   display: flex;
   width: 1400px;
   margin: 0 auto;
   justify-content: space-between;
-  /* background: greenyellow; */
 }
 
 #content .content_area .content_top .content_top_left {
@@ -148,7 +189,6 @@
   height: 250px;
   background: #f5f5f5;
   border-radius: 20px;
-  /* color: #425ae3; */
   font-size: 2.5rem;
   color: #425ae3;
   margin-top: 50px;
@@ -156,7 +196,6 @@
   flex-direction: column;
   justify-content: space-around;
   text-align: center;
-  box-shadow: 10px 5px 5px #333;
 }
 
 #content .content_area_bottom {
@@ -188,9 +227,7 @@
   padding-right: 0;
 }
 
-/* #content .content_area_bottom ul li dl {
-  margin-top: 30px;
-} */
+
 
 #content .content_area_bottom ul li img {
   margin: 0 0 20px 0;
@@ -205,11 +242,4 @@
 
 #content .content_area_bottom ul li dl dd {
   text-align: center;
-}
-
-/* #content .title_area span {
-  position: absolute;
-  top: 100px;
-  left: 670px;
-  font-size: 1.3rem;
 } */
