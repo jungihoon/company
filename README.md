@@ -76,9 +76,7 @@
 ┣ 📜ex.html
 ┣ 📜favicon.ico
 ┣ 📜index.html
-
 ┣ 📜layout.css
-
 ┗ 📜main.html
 ```
 
