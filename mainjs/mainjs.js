@@ -109,9 +109,6 @@ $(".visual .btn").click(function () {
     cnt--; //카운트 감소
   }
 
-  // for(var i=1;i<=imageCount;i++){
-  //     $('.gallery .link'+i).hide(); //모든 이미지를 보이지 않게.
-  // }
   $(".gallery li").hide(); //모든 이미지를 보이지 않게.
   $(".gallery .link" + cnt).fadeIn("slow"); //자신만 이미지가 보인다..
 
@@ -125,12 +122,6 @@ $(".visual .btn").click(function () {
     .find("span")
     .delay(1000)
     .animate({ top: 170, opacity: 1 }, "slow");
-
-  // if($(this).is('.btnRight')){
-  //   if(cnt==imageCount)cnt=0;
-  // }else if($(this).is('.btnLeft')){
-  //   if(cnt==1)cnt=imageCount+1;
-  // }
 
   timeonoff = setInterval(moveg, 4000); //부활
   if (onoff == false) {
@@ -239,26 +230,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //menus를 누르면  items, texts가 바뀌게
 
-  // for (index = 0; index <  menus.length; index++) {
-  //   var menu = menus[index];
-  //}
+  //
 
   menus.forEach((menu, index) => {
-    //=>  ==  function(){
     menu.addEventListener("click", () => {
       //모든 아이템들 활성화 제거
 
-      items.forEach((item) => {
-        item.classList.remove("on");
-      });
+      items.forEach((item) => item.classList.remove("on"));
 
-      texts.forEach((text) => {
-        text.classList.remove("on");
-      });
+      texts.forEach((text) => text.classList.remove("on"));
 
-      menus.forEach((menu) => {
-        menu.classList.remove("active");
-      });
+      menus.forEach((menu) => menu.classList.remove("active"));
 
       //클릭한 메뉴 내용 동작
       items[index].classList.add("on");
@@ -273,34 +255,11 @@ document.addEventListener("DOMContentLoaded", () => {
 //공지사항
 
 var swiper2 = new Swiper(".swiper2", {
-  //autoHeight: true, //높이유동  ( .swiper-container에 height:auto)
   slidesPerView: "auto", //단수
   spaceBetween: 26.66, //단사이 여백
-  //loop: true, //무한 loop
-  //freeMode: true,  //터치 만큼 자유롭게 이동
-  //centeredSlides: true, //센터 슬라이드 위치(만약 단수가 2개이면 양쪽은 반반씩 보임)
-  //effect: 'fade',   //페이드효과(단수가 1단이 된다)
-  //effect: 'flip',  //3D 회전효과(단수가 1단이 된다)
-  // navigation: {
-  //   //이전/다음 버튼
-  //   nextEl: ".snext",
-  //   prevEl: ".sprev",
-  // },
+
   pagination: {
     //페이지 네이션
     el: ".spagination",
-    //dynamicBullets: true,
-    //clickable: true,
-    //type: 'fraction'   //  현재/총개수 (페이지네이션블릿은 사라진다)
   },
-  // autoplay: {
-  //   //자동
-  //   delay: 3000,
-  //   disableOnInteraction: false,
-  // },
-  // scrollbar: {
-  //   //하단 스크롤바
-  //   el: ".swiper-scrollbar",
-  //   hide: true,
-  // },
 });

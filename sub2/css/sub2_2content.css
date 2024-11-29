@@ -104,6 +104,7 @@
 }
 
 #content .main_content .con_list .con_img .on {
+  object-fit: cover;
   opacity: 1;
   transition: opacity 0.5s ease-in-out;
 }
@@ -113,7 +114,7 @@
   display: flex;
   position: absolute;
   top: 0;
-  left: 350px;
+  right: 350px;
   font-size: 2rem;
   flex-direction: column;
   justify-content: center;

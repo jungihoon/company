@@ -1,28 +1,23 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // 메뉴 항목과 아이템 섹션의 각 div 선택
-  const items = document.querySelectorAll(".con_nav li a "); //탭
-  const images = document.querySelectorAll(".con_img li a img"); //이미지
+  // 메뉴 항목과 이미지 요소 가져오기
+  const menuItems = document.querySelectorAll(".con_nav li a");
+  const images = document.querySelectorAll(".con_img li a img");
 
-  //처음 화면ㅇㅔ 보이는거
-  items[0].classList.add("on");
+  // 초기 상태 설정
+  menuItems[0].classList.add("on");
   images[0].classList.add("on");
 
-  //items를 누르면  menus가 바뀌게
+  // 각 메뉴 항목에 클릭 이벤트 추가
+  menuItems.forEach((menu, index) => {
+    menu.addEventListener("click", (e) => {
+      e.preventDefault(); // 기본 링크 동작 방지
 
-  items.forEach((item, index) => {
-    item.addEventListener("click", (e) => {
-      e.preventDefault();
-      //모든 아이템들 활성화 제거
-      images.forEach((img) => {
-        img.classList.remove("on");
-      });
+      // 모든 메뉴 항목과 이미지에서 "on" 클래스 제거
+      menuItems.forEach((item) => item.classList.remove("on"));
+      images.forEach((img) => img.classList.remove("on"));
 
-      items.forEach((item) => {
-        item.classList.remove("on");
-      });
-
-      //클릭한 메뉴 내용 동작
-      items[index].classList.add("on");
+      // 클릭된 메뉴 항목과 해당 이미지에 "on" 클래스 추가
+      menuItems[index].classList.add("on");
       images[index].classList.add("on");
     });
   });

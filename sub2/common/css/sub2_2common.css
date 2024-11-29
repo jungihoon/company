@@ -1,8 +1,10 @@
 @charset "utf-8";
 /* 헤더공통 css */
 #headerArea {
+  width: 2000px;
+  margin: 0 auto;
   position: fixed;
-  width: 100%;
+  /* width: 100%; */
   left: 0;
   top: 0;
   z-index: 100;
@@ -30,7 +32,7 @@
 #headerArea .header_inner .logo {
   width: 150px;
   height: 44px;
-  background: url(../images/top_logo.png) 50% 50% no-repeat;
+  background: url(/common/images/top_logo.png) 50% 50% no-repeat;
   background-size: 130px auto;
   text-indent: -9999em;
 }
@@ -89,6 +91,7 @@
   opacity: 1;
   transition-delay: 0.7s;
   transform: translateY(10px);
+  /* visibility: visible; */
   transition: all 0.3s cubic-bezier(0.59, 0.01, 0.28, 1);
 }
 #headerArea #gnb .dropdownmenu.is-hide > li .submenu {
@@ -133,6 +136,8 @@
 #headerArea.fixed {
   background-color: #fff;
   box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
+  width: 2000px;
+  margin: 0 auto;
 }
 
 #headerArea.fixed #gnb .dropdownmenu li a,
@@ -162,6 +167,11 @@
   left: 0;
 }
 
+#mainVisual > img {
+  width: 2000px;
+  height: 400px;
+}
+
 /* 서브네비 공통 */
 .sub_nav {
   width: 2000px;
@@ -184,7 +194,10 @@
   font-weight: bold;
   padding: 20px 0;
 }
-.sub_nav ul li .history {
+.sub_nav ul li .leisure {
   color: #318fcb;
+  /* background: #318fcb; */
   border-bottom: 3px solid #318fcb;
 }
+
+/* title_area 공통 */
