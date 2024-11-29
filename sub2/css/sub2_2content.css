@@ -113,7 +113,7 @@
   height: 700px;
   display: flex;
   position: absolute;
-  top: 0;
+  top: 320px;
   right: 350px;
   font-size: 2rem;
   flex-direction: column;
