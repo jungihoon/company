@@ -210,6 +210,8 @@ $(() => {
 //          기술개발
 
 document.addEventListener("DOMContentLoaded", () => {
+  //문서가 로드 되고 코드 실행
+
   // 메뉴 항목과 아이템 섹션의 각 div 선택
   const menus = document.querySelectorAll(".skill_link li a");
   const items = document.querySelectorAll(".items .item");
@@ -226,10 +228,9 @@ document.addEventListener("DOMContentLoaded", () => {
   //}
 
   menus.forEach((menu, index) => {
-    //=>  ==  function(){
     menu.addEventListener("click", () => {
+      //
       //모든 아이템들 활성화 제거
-
       items.forEach((item) => {
         item.classList.remove("on");
       });
