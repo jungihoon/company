@@ -44,6 +44,7 @@
 }
 .sub_nav ul {
   display: flex;
+  justify-content: space-around;
   width: 1200px;
   margin: 0 auto;
 }
@@ -111,7 +112,7 @@
 #content .title_area p::after {
   content: "";
   display: block;
-  background: #318fcb;
+  background: #3366cc;
   width: 3px;
   height: 150px;
   position: absolute;
@@ -127,11 +128,8 @@
   padding-top: 50px;
 }
 #content .content_area .content_top {
-  /* display: flex;
-  width: 1400px; */
   margin: 0 auto;
   justify-content: space-between;
-  /* background: greenyellow; */
 }
 
 #content .content_area .content_top .content_top_left {

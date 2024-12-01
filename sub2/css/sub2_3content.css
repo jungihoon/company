@@ -40,7 +40,7 @@
 #content .title_area p::after {
   content: "";
   display: block;
-  background: #318fcb;
+  background: #3366cc;
   width: 3px;
   height: 150px;
   position: absolute;
