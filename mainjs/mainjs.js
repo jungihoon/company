@@ -238,24 +238,24 @@ $(".visual .btn").click(function () {
       $('.ps').html('<span class="hidden">stop</span><i class="fa-regular fa-circle-stop"></i>');
     }
   });
-=======
-  $(".mbutton").css("background", "#333"); //버튼 모두불꺼
-  $(".mbutton").css("width", "16");
-  $(".btn" + cnt).css("background", "#fff"); //자신 버튼만 불켜
-  $(".btn" + cnt).css("width", "30px");
+// =======
+//   $(".mbutton").css("background", "#333"); //버튼 모두불꺼
+//   $(".mbutton").css("width", "16");
+//   $(".btn" + cnt).css("background", "#fff"); //자신 버튼만 불켜
+//   $(".btn" + cnt).css("width", "30px");
 
-  $(".gallery li span").css("top", 210).css("opacity", 0);
-  $(".gallery .link" + cnt)
-    .find("span")
-    .delay(1000)
-    .animate({ top: 170, opacity: 1 }, "slow");
+//   $(".gallery li span").css("top", 210).css("opacity", 0);
+//   $(".gallery .link" + cnt)
+//     .find("span")
+//     .delay(1000)
+//     .animate({ top: 170, opacity: 1 }, "slow");
 
-  timeonoff = setInterval(moveg, 4000); //부활
-  if (onoff == false) {
-    onoff = true;
-    $(".ps").html('<span class="hidden">stop</span><i class="fa-regular fa-circle-stop"></i>');
-  }
->>>>>>> d105e52f5c9844ac3c5890a069737a5f02d0c950
+//   timeonoff = setInterval(moveg, 4000); //부활
+//   if (onoff == false) {
+//     onoff = true;
+//     $(".ps").html('<span class="hidden">stop</span><i class="fa-regular fa-circle-stop"></i>');
+//   }
+// >>>>>>> d105e52f5c9844ac3c5890a069737a5f02d0c950
 });
 
 // // swiper
