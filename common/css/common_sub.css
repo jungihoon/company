@@ -120,6 +120,13 @@
 }
 
 /* 각 section content area */
+/* page contents common */
+.content_area {
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
 /* #content .content_area {
   width: 100%;
   margin: 0 auto;
@@ -230,10 +237,3 @@
 #content .content_area_bottom ul li dl dd {
   text-align: center;
 } */
-
-/* page contents common */
-.content_area {
-  width: 100%;
-  margin: 0 auto;
-  padding-top: 50px;
-}
