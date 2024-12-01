@@ -49,6 +49,7 @@
 }
 .sub_nav ul {
   display: flex;
+  justify-content: space-around;
   width: 1200px;
   margin: 0 auto;
 }
@@ -111,9 +112,11 @@
 #content .title_area p::after {
   content: '';
   display: block;
+
   background: #318fcb;
   width: 1px;
   height: 30px;
+
   position: absolute;
   left: 50%;
   top: 50px;
