@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="../common/css/common_sub.css" />
 
     <link rel="stylesheet" href="../common/css/aos.css" />
-    <link rel="stylesheet" href="./css/sub3_1content.css" />
+    <link rel="stylesheet" href="./css/sub3_2content.css" />
   </head>
   <body>
     <div class="skipNav">
@@ -94,7 +94,7 @@
       </header>
 
       <div id="mainVisual">
-        <img src="./images/content1/visual.jpg" alt="서브비주얼이미지" />
+        <img class="img_scale" src="./images/content1/visual.jpg" alt="서브비주얼이미지" />
         <strong>기술개발</strong>
       </div>
       <div class="sub_nav">
@@ -114,7 +114,7 @@
           </div>
           <div class="content_area">
             <div class="sub_visual">
-              <img src="./images/content2/skill_visual.jpg" alt="" />
+              <img class="img_scale" src="./images/content2/skill_visual.jpg" alt="" />
             </div>
             <div class="content_top">
               <div class="content_top_txt">
@@ -134,12 +134,17 @@
                 <h3 class="hidden">고속도로</h3>
                 <div class="sub_list">
                   <div class="sub_list_img">
-                    <img src="./images/content2/highway01.jpg" alt="" />
+                    <img
+                      class="img_scale"
+                      src="./images/content2/highway01.jpg"
+                      data-aos="flip-left"
+                      data-aos-duration="1000"
+                      alt="" />
                   </div>
-                  <div class="sub_list_txt">
+                  <div class="sub_list_txt" data-aos="fade-left">
                     <span>01</span>
                     <p>HighWays</p>
-                    <dl>
+                    <dl data-aos="fade-up">
                       <dt>고속도로</dt>
                       <dd>
                         고속도로는 국가의 주요 도시와 시설을 잇는 대동맥으로, <br />
@@ -151,10 +156,22 @@
                   </div>
                 </div>
                 <div class="sub_list_bottom">
-                  <img src="./images/content2/highway02.jpg" alt="" />
-                  <img src="./images/content2/highway03.jpg" alt="" />
+                  <img
+                    class="img_scale"
+                    src="./images/content2/highway02.jpg"
+                    data-aos="flip-down"
+                    data-aos-duration="1000"
+                    alt="" />
+                  <img
+                    class="img_scale"
+                    src="./images/content2/highway03.jpg"
+                    src="./images/content2/highway02.jpg"
+                    data-aos="flip-down"
+                    data-aos-delay="200"
+                    data-aos-duration="1000"
+                    alt="" />
                 </div>
-                <p class="sub_list_bottomtxt">
+                <p class="sub_list_bottomtxt" data-aos="fade-up" data-aos-delay="500">
                   GS건설은 1978년 부산~마산 고속도로 3공구 공사를 시작으로 국내 주요 고속도로 건설에
                   참여해 물류 비용 절감 및 지역 발전을 이끌어왔습니다. 국가사업 이외에도 민자도로인
                   천안~논산, <br />
@@ -172,13 +189,13 @@
               <section class="num02">
                 <h3 class="hidden">도로 및 교량</h3>
                 <div class="sub_list">
-                  <div class="sub_list_txt">
+                  <div class="sub_list_txt" data-aos="fade-right">
                     <span>02</span>
                     <p>
                       Roads & <br />
                       Bridges
                     </p>
-                    <dl>
+                    <dl data-aos="fade-right" data-aos-delay="200">
                       <dt>도로 및 교량</dt>
                       <dd>
                         도로와 교량은 인적·물적 자원의 이동과 연결을 담당하는 <br />주요 시설입니다.
@@ -188,14 +205,28 @@
                     </dl>
                   </div>
                   <div class="sub_list_img">
-                    <img src="./images/content2/road01.jpg" alt="" />
+                    <img
+                      class="img_scale"
+                      src="./images/content2/road01.jpg"
+                      data-aos="zoom-out"
+                      data-aos-delay="200"
+                      alt="" />
                   </div>
                 </div>
                 <div class="sub_list_bottom">
-                  <img src="./images/content2/road02.jpg" alt="" />
-                  <img src="./images/content2/road03.jpg" alt="" />
+                  <img
+                    class="img_scale"
+                    src="./images/content2/road02.jpg"
+                    data-aos="zoom-in"
+                    alt="" />
+                  <img
+                    class="img_scale"
+                    src="./images/content2/road03.jpg"
+                    data-aos="zoom-in"
+                    data-aos-delay="200"
+                    alt="" />
                 </div>
-                <p class="sub_list_bottomtxt">
+                <p class="sub_list_bottomtxt" data-aos="fade-up" data-aos-delay="500">
                   GS건설은 1984년 국내 최초 전철교·차도교 복합 교량인 동작대교를 건설한 이래
                   대한민국 교량의 기술적·심미적 기준을 선도해왔습니다. 총 연장 7.4km의 광안대교는
                   수려한 미관과 함께 <br />국내 최대 해상 복층 교량 건설의 역사를 썼으며, 부산과
@@ -212,13 +243,13 @@
               <section class="num03">
                 <h3 class="hidden">철도</h3>
                 <div class="sub_list">
-                  <div class="sub_list_txt">
+                  <div class="sub_list_txt" data-aos="fade" data-aos-duration="1000">
                     <span>03</span>
                     <p>
                       Railways & <br />
                       Subways
                     </p>
-                    <dl>
+                    <dl data-aos="fade-up">
                       <dt>철도 및 지하철</dt>
                       <dd>
                         GS건설은 국가 주요 철도망과 지하철 건설 사업에 적극 <br />
@@ -228,14 +259,32 @@
                     </dl>
                   </div>
                   <div class="sub_list_img">
-                    <img src="./images/content2/rail01.jpg" alt="" />
+                    <img
+                      class="img_scale"
+                      src="./images/content2/rail01.jpg"
+                      data-aos="fade-up-left"
+                      data-aos-duration="1000"
+                      alt="" />
                   </div>
                 </div>
                 <div class="sub_list_bottom">
-                  <img src="./images/content2/rail02.jpg" alt="" />
-                  <img src="./images/content2/rail03.jpg" alt="" />
+                  <img
+                    class="img_scale"
+                    src="./images/content2/rail02.jpg"
+                    data-aos="fade-down-left"
+                    alt="" />
+                  <img
+                    class="img_scale"
+                    src="./images/content2/rail03.jpg"
+                    data-aos="fade-down-right"
+                    data-aos-delay="200"
+                    alt="" />
                 </div>
-                <p class="sub_list_bottomtxt">
+                <p
+                  class="sub_list_bottomtxt"
+                  data-aos="fade-up"
+                  data-aos-delay="500"
+                  data-aos-delay="500">
                   GS건설은 1978년 부산~마산 고속도로 3공구 공사를 시작으로 국내 주요 고속도로 건설에
                   참여해 물류 비용 절감 및 지역 발전을 이끌어왔습니다. 국가사업 이외에도 민자도로인
                   천안~논산, <br />
@@ -254,12 +303,18 @@
                 <h3 class="hidden">항만 및 수자원</h3>
                 <div class="sub_list">
                   <div class="sub_list_img">
-                    <img src="./images/content2/harbor01.jpg" alt="" />
+                    <img
+                      class="img_scale"
+                      src="./images/content2/harbor01.jpg"
+                      data-aos="flip-left"
+                      data-aos-delay="200"
+                      data-aos-duration="1000"
+                      alt="" />
                   </div>
-                  <div class="sub_list_txt">
+                  <div class="sub_list_txt" data-aos="fade-left">
                     <span>04</span>
                     <p>Harbors & Relamation</p>
-                    <dl>
+                    <dl data-aos="fade-up" data-aos-duration="400">
                       <dt>항만 및 수자원</dt>
                       <dd>
                         항만 시설을 비롯, 수자원의 효율적인 이용을 촉진하는 기반시설은 <br />수출을
@@ -271,10 +326,26 @@
                   </div>
                 </div>
                 <div class="sub_list_bottom">
-                  <img src="./images/content2/harbor02.jpg" alt="" />
-                  <img src="./images/content2/harbor03.jpg" alt="" />
+                  <img
+                    class="img_scale"
+                    src="./images/content2/harbor02.jpg"
+                    data-aos="flip-up"
+                    data-aos-duration="1000"
+                    alt="" />
+                  <img
+                    class="img_scale"
+                    src="./images/content2/harbor03.jpg"
+                    data-aos="flip-up"
+                    data-aos-delay="200"
+                    data-aos-duration="1000"
+                    alt="" />
                 </div>
-                <p class="sub_list_bottomtxt">
+                <p
+                  class="sub_list_bottomtxt"
+                  <p
+                  class="sub_list_bottomtxt"
+                  data-aos="fade-up"
+                  data-aos-delay="500">
                   GS건설은 호안, 방사, 방조, 방파제 등 종합 항만 시설 건설 분야에서 국내 선두권의
                   경쟁력을 축적했습니다. <br />국내 최대의 컨테이너 부두는 물론 국내 제1의 항만이자
                   동아시아 허브 항인 부산항을 건설해 세계적 경쟁력을 갖춘 물류 거점으로
@@ -289,12 +360,14 @@
               <section class="num05">
                 <h3 class="hidden">환경</h3>
                 <div class="sub_list">
-                  <div class="sub_list_txt">
+                  <div class="sub_list_txt" data-aos="fade-right">
                     <span>05</span>
                     <p>Environment</p>
                     <dl>
-                      <dt>환경</dt>
-                      <dd>
+                      <dt data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">
+                        환경
+                      </dt>
+                      <dd data-aos="fade-right" data-aos-delay="200" data-aos-duration="1000">
                         환경 산업은 인류의 지속 가능한 발전을 위해 선제적인 관심과 투자가 <br />
                         필요한 분야입니다. GS건설은 혁신적인 기술 개발에 투자하며 <br />미래 에너지
                         발전과 보급의 새 지평을 열고 있습니다.
@@ -302,14 +375,34 @@
                     </dl>
                   </div>
                   <div class="sub_list_img">
-                    <img src="./images/content2/environment01.jpg" alt="" />
+                    <img
+                      class="img_scale"
+                      src="./images/content2/environment01.jpg"
+                      data-aos="zoom-out"
+                      data-aos-delay="200"
+                      data-aos-duration="1000"
+                      alt="" />
                   </div>
                 </div>
                 <div class="sub_list_bottom">
-                  <img src="./images/content2/environment02.jpg" alt="" />
-                  <img src="./images/content2/environment03.jpg" alt="" />
+                  <img
+                    class="img_scale"
+                    src="./images/content2/environment02.jpg"
+                    data-aos="zoom-in"
+                    alt="" />
+                  <img
+                    class="img_scale"
+                    src="./images/content2/environment03.jpg"
+                    data-aos="zoom-in"
+                    data-aos-delay="200"
+                    alt="" />
                 </div>
-                <p class="sub_list_bottomtxt">
+                <p
+                  class="sub_list_bottomtxt"
+                  <p
+                  class="sub_list_bottomtxt"
+                  data-aos="fade-up"
+                  data-aos-delay="500">
                   GS건설은 하수처리장, 정수장, 하수관거 등 수(水) 처리 분야 국내 최상위 시공 실적을
                   보유하고 있습니다. <br />친환경 설계와 GNR(GS Nutrients Removal : GS 하수 영양소
                   제거 공법) 하수처리 신기술 등을 개발해 처리 시설의 완전 지하화 및 상부 공원화를
