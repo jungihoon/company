@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="user"></div>
+
+    <script>
+      const user = {
+        name: "홍길동",
+        age: 30,
+        job: "programmer",
+      };
+      let height = 180;
+      let test = [100, 50, 44];
+
+      let html = `
+      당신의 이름: ${user.name}
+      나이: ${user.age} ,
+      직업: ${user.job} ,
+      키: ${height}
+      국어: ${test[0]} 점,
+      영어: ${test[1]} 점,
+      수학: ${test[2]} 점이다.
+
+      `;
+      document.getElementById("user").innerHTML = html;
+    </script>
+  </body>
+</html>
