@@ -69,7 +69,7 @@
 }
 
 .sub_nav ul li .current:before {
-  content: "";
+  content: '';
   position: absolute;
   bottom: -1px;
   left: 0;
@@ -109,7 +109,7 @@
 }
 
 #content .title_area p::after {
-  content: "";
+  content: '';
   display: block;
   background: #318fcb;
   width: 1px;
@@ -126,8 +126,6 @@
   padding-top: 100px;
 }
 #content .content_area .content_top {
-  /* display: flex;
-  width: 1400px; */
   margin: 0 auto;
   justify-content: space-between;
 }
@@ -238,8 +236,4 @@
   width: 100%;
   margin: 0 auto;
   padding-top: 50px;
-}
-.content_area .content_top {
-  width: 1400px;
-  margin: 0 auto;
 }
