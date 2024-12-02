@@ -17,17 +17,21 @@
   transition: width 1s ease-in-out;
   z-index: 1;
 }
+
 .sub01 .content_intro:before {
   background: url("../images/img_main_sub01.jpg") 50% 50% no-repeat;
 }
+
 .sub02 .content_intro:before {
   background: url("../images/img_main_sub02.jpg") 50% 50% no-repeat;
 }
+
 .sub03 .content_intro:before {
-  background: url("../images/img_main_sub03.jpg") 50% 50% no-repeat;
+  background: url("../images/content3/infra04.jpg") 50% 50% no-repeat;
 }
+
 .sub04 .content_intro:before {
-  background: url("../images/img_main_sub04.jpg") 50% 50% no-repeat;
+  background: url("../images/content4/powervisual.jpg") 50% 50% no-repeat;
 }
 
 .content_intro_txt {
@@ -47,6 +51,13 @@
 }
 
 .sub01 .content_intro .content_intro_txt p {
+  color: #fff;
+}
+
+.sub03 .content_intro .content_intro_txt p {
+  color: #ffff;
+}
+.sub04 .content_intro .content_intro_txt p {
   color: #fff;
 }
 
@@ -78,7 +89,7 @@
   letter-spacing: -0.5px;
 }
 
-.content_area .con_title::before {
+.content_area .con_title:before {
   content: "";
   position: absolute;
   top: -10px;
@@ -107,7 +118,7 @@
   display: flex;
   top: 0;
   left: calc(50% - 700px);
-  width: 350px;
+  width: 360px;
   height: 700px;
   padding: 130px 0 0 0;
   font-size: 1.7rem;
