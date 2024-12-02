@@ -807,57 +807,7 @@
   color: #fff;
 }
 
-/* Family Site */
-.select {
-  width: 150px;
-  background: #fff;
-  border: 1px solid #ccc;
-  position: relative;
-  margin-left: 40px;
-}
 
-.select a {
-  color: #333;
-}
-
-.select .arrow {
-  display: block;
-  font-size: 1em;
-  padding: 10px 0;
-  text-align: center;
-  transition: all 1s;
-}
-.select .arrow i {
-  font-size: 0.8em;
-  color: red;
-}
-.select .arrow:hover {
-  color: #fff;
-  background: #000;
-}
-.select .aList {
-  position: absolute;
-  top: -177px;
-  left: -1px;
-  width: 150px;
-  border: 1px solid #ccc;
-  display: none;
-  background: #fff;
-}
-.select .aList li {
-  line-height: 1.5em;
-  border-bottom: 1px solid #ccc;
-}
-.select .aList li a {
-  display: block;
-  text-align: center;
-  padding: 5px 0;
-  transition: all 1s;
-}
-.select .aList li a:hover {
-  color: #fff;
-  background: #333;
-}
 
 @keyframes countingBar {
   0% {
