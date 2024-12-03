@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
   // // 메뉴 항목과 이미지 요소 가져오기
   // const menuItems = document.querySelectorAll('.con_nav li a');
   // const images = document.querySelectorAll('.con_img_wrap li a img');
@@ -23,22 +23,22 @@ document.addEventListener('DOMContentLoaded', () => {
   // });
 
   // 메뉴 항목과 이미지 리스트 가져오기
-  const menuItems = document.querySelectorAll('.main_content .con_nav li a');
-  const imageList = document.querySelector('.main_content .con_img_wrap');
+  const menuItems = document.querySelectorAll(".main_content .con_nav li a");
+  const imageList = document.querySelector(".main_content .con_img_wrap");
 
   // 초기 상태 설정
-  menuItems[0].classList.add('on'); // 첫 번째 메뉴 활성화
+  menuItems[0].classList.add("on"); // 첫 번째 메뉴 활성화
 
   // 각 메뉴 항목에 클릭 이벤트 추가
   menuItems.forEach((menu, index) => {
-    menu.addEventListener('click', (e) => {
+    menu.addEventListener("click", (e) => {
       e.preventDefault(); // 기본 링크 동작 방지
 
       // 모든 메뉴 항목에서 "on" 클래스 제거
-      menuItems.forEach((item) => item.classList.remove('on'));
+      menuItems.forEach((item) => item.classList.remove("on"));
 
       // 클릭된 메뉴 항목에 "on" 클래스 추가
-      menu.classList.add('on');
+      menu.classList.add("on");
 
       // 슬라이드 애니메이션 (위로 이동)
       const slideHeight = 700; // 슬라이드 높이 (700px)
@@ -75,8 +75,8 @@ document.addEventListener('DOMContentLoaded', () => {
     (entries, observer) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          document.querySelectorAll('.essentials_txt strong').forEach((strong) => {
-            const endValue = parseInt(strong.textContent.replace(/,/g, ''), 10); // 숫자 추출
+          document.querySelectorAll(".essentials_txt strong").forEach((strong) => {
+            const endValue = parseInt(strong.textContent.replace(/,/g, ""), 10); // 숫자 추출
             animateNumber(strong, 0, endValue, 3000); // 0부터 해당 숫자까지 3초 동안 애니메이션
           });
 
@@ -91,5 +91,5 @@ document.addEventListener('DOMContentLoaded', () => {
   );
 
   // .essentials 요소 관찰 시작
-  observer.observe(document.querySelector('.essentials'));
+  observer.observe(document.querySelector(".essentials"));
 });
