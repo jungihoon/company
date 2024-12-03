@@ -112,6 +112,7 @@ $('.visual .btn').click(function () {
   // for(var i=1;i<=imageCount;i++){
   //     $('.gallery .link'+i).hide(); //모든 이미지를 보이지 않게.
   // }
+<<<<<<< HEAD
   $('.gallery li').hide(); //모든 이미지를 보이지 않게.
   $('.gallery .link' + cnt).fadeIn('slow'); //자신만 이미지가 보인다..
 
@@ -125,6 +126,21 @@ $('.visual .btn').click(function () {
     .find('span')
     .delay(1000)
     .animate({ top: 170, opacity: 1 }, 'slow');
+=======
+  $(".gallery li").hide(); //모든 이미지를 보이지 않게.
+  $(".gallery .link" + cnt).fadeIn("slow"); //자신만 이미지가 보인다..
+
+  $(".mbutton").css("background", "#333"); //버튼 모두불꺼
+  $(".mbutton").css("width", "16");
+  $(".btn" + cnt).css("background", "#fff"); //자신 버튼만 불켜
+  $(".btn" + cnt).css("width", "30px");
+
+  $(".gallery li span").css("top", 210).css("opacity", 0);
+  $(".gallery .link" + cnt)
+    .find("span")
+    .delay(1000)
+    .animate({ top: 170, opacity: 1 }, "slow");
+>>>>>>> 333e09ddb52937d4de1ccae92afc06847703a157
 
   // if($(this).is('.btnRight')){
   //   if(cnt==imageCount)cnt=0;
@@ -135,48 +151,52 @@ $('.visual .btn').click(function () {
   timeonoff = setInterval(moveg, 4000); //부활
   if (onoff == false) {
     onoff = true;
+<<<<<<< HEAD
     $('.ps').html('<span class="hidden">stop</span><i class="fa-regular fa-circle-stop"></i>');
+=======
+    $(".ps").html('<span class="hidden">stop</span><i class="fa-regular fa-circle-stop"></i>');
+>>>>>>> 333e09ddb52937d4de1ccae92afc06847703a157
   }
 });
 
 // // swiper
 
 // console.log(progressCircle);
-window.addEventListener('DOMContentLoaded', function () {
-  const progressCircle = document.querySelector('#mainVisual .autoplay-progress svg');
-  const progressContent = document.querySelector('#mainVisual .autoplay-progress span');
-  var mainSwiper = new Swiper('.main_slide', {
+window.addEventListener("DOMContentLoaded", function () {
+  const progressCircle = document.querySelector("#mainVisual .autoplay-progress svg");
+  const progressContent = document.querySelector("#mainVisual .autoplay-progress span");
+  var mainSwiper = new Swiper(".main_slide", {
     loop: true,
     speed: 1200,
     parallax: true,
-    slideActiveClass: 'on',
+    slideActiveClass: "on",
     autoplay: {
       delay: 3200,
       disableOnInteraction: false,
     },
     pagination: {
-      el: '#mainVisual .pager',
-      type: 'fraction',
+      el: "#mainVisual .pager",
+      type: "fraction",
     },
     navigation: {
-      nextEl: '#mainVisual .next',
-      prevEl: '#mainVisual .prev',
+      nextEl: "#mainVisual .next",
+      prevEl: "#mainVisual .prev",
     },
     on: {
       autoplayTimeLeft(s, time, progress) {
-        progressCircle.style.setProperty('--progress', 1 - progress);
+        progressCircle.style.setProperty("--progress", 1 - progress);
       },
     },
   });
-  $('#mainVisual .swiper-pause').click(function () {
+  $("#mainVisual .swiper-pause").click(function () {
     mainSwiper.autoplay.stop();
   });
-  $('#mainVisual .swiper-play').click(function () {
+  $("#mainVisual .swiper-play").click(function () {
     mainSwiper.autoplay.start();
   });
   $(function () {
-    $('#mainVisual .play').click(function () {
-      $(this).toggleClass('on');
+    $("#mainVisual .play").click(function () {
+      $(this).toggleClass("on");
     });
   });
 });
@@ -189,19 +209,19 @@ const min_width = 310; ////작아졌을때 사이즈
 const max_width = 730; //li에 마우스 엔터 되었을때
 
 $(() => {
-  const $businessItems = $('.business_box .business_content li');
-  const $businessContainer = $('.business_box .business_content');
+  const $businessItems = $(".business_box .business_content li");
+  const $businessContainer = $(".business_box .business_content");
 
-  $businessContainer.on('mouseenter', 'li', function () {
-    $businessItems.removeClass('active inactive');
-    $(this).addClass('active');
-    $businessItems.not(this).addClass('inactive');
-    console.log('mouseenter on li:', $(this).index() + 1);
+  $businessContainer.on("mouseenter", "li", function () {
+    $businessItems.removeClass("active inactive");
+    $(this).addClass("active");
+    $businessItems.not(this).addClass("inactive");
+    console.log("mouseenter on li:", $(this).index() + 1);
   });
 
-  $businessContainer.on('mouseleave', function () {
-    $businessItems.removeClass('active inactive');
-    console.log('mouseleave from all li');
+  $businessContainer.on("mouseleave", function () {
+    $businessItems.removeClass("active inactive");
+    console.log("mouseleave from all li");
   });
 });
 
@@ -226,13 +246,18 @@ function cnt_per() {
 }
 cnt_per();
 
+<<<<<<< HEAD
 document.addEventListener('DOMContentLoaded', () => {
+=======
+document.addEventListener("DOMContentLoaded", () => {
+>>>>>>> 333e09ddb52937d4de1ccae92afc06847703a157
   // 메뉴 항목과 아이템 섹션의 각 div 선택
-  const menus = document.querySelectorAll('.skill_link li a');
-  const items = document.querySelectorAll('.items .item');
-  const texts = document.querySelectorAll('.tit_items .tit_item');
+  const menus = document.querySelectorAll(".skill_link li a");
+  const items = document.querySelectorAll(".items .item");
+  const texts = document.querySelectorAll(".tit_items .tit_item");
 
   //처음 화면ㅇㅔ 보이는거
+<<<<<<< HEAD
   items[0].classList.add('on');
   texts[0].classList.add('on');
   menus[0].classList.add('active');
@@ -264,6 +289,34 @@ document.addEventListener('DOMContentLoaded', () => {
       items[index].classList.add('on');
       texts[index].classList.add('on');
       menu.classList.add('active');
+=======
+  items[0].classList.add("on");
+  texts[0].classList.add("on");
+  menus[0].classList.add("active");
+
+  //menus를 누르면  items, texts가 바뀌게
+
+  menus.forEach((menu, index) => {
+    menu.addEventListener("click", () => {
+      //모든 아이템들 활성화 제거
+
+      items.forEach((item) => {
+        item.classList.remove("on");
+      });
+
+      texts.forEach((text) => {
+        text.classList.remove("on");
+      });
+
+      menus.forEach((menu) => {
+        menu.classList.remove("active");
+      });
+
+      //클릭한 메뉴 내용 동작
+      items[index].classList.add("on");
+      texts[index].classList.add("on");
+      menu.classList.add("active");
+>>>>>>> 333e09ddb52937d4de1ccae92afc06847703a157
 
       cnt_per();
     });
@@ -272,9 +325,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
 //공지사항
 
+<<<<<<< HEAD
 var swiper2 = new Swiper('.swiper2', {
   //autoHeight: true, //높이유동  ( .swiper-container에 height:auto)
   slidesPerView: 'auto', //단수
+=======
+var swiper2 = new Swiper(".swiper2", {
+  //autoHeight: true, //높이유동  ( .swiper-container에 height:auto)
+  slidesPerView: "auto", //단수
+>>>>>>> 333e09ddb52937d4de1ccae92afc06847703a157
   spaceBetween: 26.66, //단사이 여백
   //loop: true, //무한 loop
   //freeMode: true,  //터치 만큼 자유롭게 이동
@@ -288,7 +347,11 @@ var swiper2 = new Swiper('.swiper2', {
   // },
   pagination: {
     //페이지 네이션
+<<<<<<< HEAD
     el: '.spagination',
+=======
+    el: ".spagination",
+>>>>>>> 333e09ddb52937d4de1ccae92afc06847703a157
     //dynamicBullets: true,
     //clickable: true,
     //type: 'fraction'   //  현재/총개수 (페이지네이션블릿은 사라진다)
