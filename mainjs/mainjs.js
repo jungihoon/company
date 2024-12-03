@@ -239,12 +239,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //menus를 누르면  items, texts가 바뀌게
 
-  // for (index = 0; index <  menus.length; index++) {
-  //   var menu = menus[index];
-  //}
-
   menus.forEach((menu, index) => {
-    //=>  ==  function(){
     menu.addEventListener("click", () => {
       //모든 아이템들 활성화 제거
 
