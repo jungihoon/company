@@ -6,6 +6,10 @@
   color: #cc6600;
 }
 /* 서브 비주얼 공통 */
+#headerArea {
+  background: rgba(0, 0, 0, 0.1);
+  /* backdrop-filter: inherit; */
+}
 #mainVisual {
   position: relative;
   width: 100%;
@@ -24,19 +28,19 @@
 
 #mainVisual .sub_title {
   position: absolute;
-  top: 50%;
+  top: calc(50% - 30px);
   width: 100%;
   text-align: center;
 }
 
 #mainVisual .sub_title strong {
-  font-size: 2rem;
+  font-size: 2.2rem;
   color: #fff;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 #mainVisual .sub_title p {
-  font-size: 16px;
+  font-size: 1rem;
   color: #fff;
 }
 
@@ -70,7 +74,7 @@
 }
 
 .sub_nav ul li .current:before {
-  content: "";
+  content: '';
   position: absolute;
   bottom: -1px;
   left: 0;
@@ -111,7 +115,7 @@
 }
 
 #content .title_area p::after {
-  content: "";
+  content: '';
   display: block;
 
   background: #318fcb;
