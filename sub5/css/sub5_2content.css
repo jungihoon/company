@@ -11,8 +11,8 @@
 .desc li .welfare_txt::before {
   content: "";
   position: absolute;
-  bottom: -12px;
-  left: 118px;
+  bottom: -65px;
+  left: -205px;
   width: 24px;
   height: 24px;
   background: url(../images/content2/arrow_btm.svg) no-repeat #04b084 50% 50%;
@@ -57,10 +57,12 @@
 }
 
 .desc .welfare_txt {
+  position: relative;
   text-align: justify;
   font-size: 1.2rem;
   font-weight: 500;
   width: 1000px;
+  height: 120px;
   line-height: 2.1;
 }
 
