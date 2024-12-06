@@ -18,6 +18,7 @@
   left: 50%;
   transform: translateX(-50%);
   overflow: hidden;
+  /* background: url(/sub1/images/content1/sub_visual02.jpg); */
 }
 
 #mainVisual img {
@@ -74,7 +75,7 @@
 }
 
 .sub_nav ul li .current:before {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -1px;
   left: 0;
@@ -115,7 +116,7 @@
 }
 
 #content .title_area p::after {
-  content: '';
+  content: "";
   display: block;
 
   background: #318fcb;
