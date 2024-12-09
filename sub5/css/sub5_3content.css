@@ -274,7 +274,8 @@
   margin-top: 50px;
 }
 
-.mail_box .mail_txt ul li:nth-of-type(3) span {
+.mail_box .mail_txt ul li:nth-of-type(3) span,
+.mail_box .mail_txt ul li:nth-of-type(4) span {
   width: 90px;
 }
 .mail_box .mail_txt ul li:nth-of-type(3) em {
@@ -305,4 +306,20 @@
   height: 50px;
   font-size: 1.1rem;
   padding: 0 20px;
+}
+
+.mail_box .mail_txt select {
+  width: 20%;
+  padding: 0 15px;
+  margin-left: 20px;
+  font-size: 1.2rem;
+}
+
+.mail_box .mail_txt textarea {
+  width: 100%;
+  height: 50px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 20px;
+  height: 500px;
 }
