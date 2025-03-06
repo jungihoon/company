@@ -473,11 +473,11 @@ address {
 }
 .select .aList {
   position: absolute;
+  display: none;
   top: -177px;
   left: -1px;
   width: 150px;
   border: 1px solid #ccc;
-  display: none;
   background: #fff;
 }
 .select .aList li {

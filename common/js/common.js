@@ -88,31 +88,36 @@ $(document).ready(function () {
 
 //패밀리사이트 이동
 $(document).ready(function () {
-  // $('.select .arrow').click(function(){
-  // 	$('.select .aList').fadeIn('slow');
-  // });
+  $(".select .arrow").on("click", function (e) {
+    e.preventDefault(); // 🔥 새로고침 방지
 
-  // $('.select .aList').mouseleave(function(){
-  // 	$(this).fadeOut('fast');
-  // });
+    let list = $(".select .aList");
 
-  $(".select .arrow").toggle(
-    function () {
-      $(".select .aList").fadeIn("slow");
-      $(this).children("span").html('<i class="fa-solid fa-chevron-down"></i>');
-    },
-    function () {
-      $(".select .aList").fadeOut("fast");
+    if (list.is(":visible")) {
+      list.fadeOut("fast");
       $(this).children("span").html('<i class="fa-solid fa-chevron-up"></i>');
+    } else {
+      list.fadeIn("slow");
+      $(this).children("span").html('<i class="fa-solid fa-chevron-down"></i>');
     }
-  );
+  });
 
-  //tab키 처리
+  // tab키 처리
   $(".select .arrow").on("focus", function () {
     $(".select .aList").fadeIn("slow");
   });
-  $(".select .aList li:last a").on("blur", function () {
-    $(".select .aList").fadeOut("fast");
+
+  $(".select .aList li:last a").on("keydown", function (e) {
+    if (e.key === "Tab") {
+      $(".select .aList").fadeOut("fast");
+    }
+  });
+
+  // 바깥 클릭 시 닫기
+  $(document).on("click", function (e) {
+    if (!$(".select").has(e.target).length) {
+      $(".select .aList").fadeOut("fast");
+    }
   });
 });
 

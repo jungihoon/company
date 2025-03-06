@@ -91,7 +91,7 @@
 }
 #content .title_area {
   position: relative;
-  width: 1400px;
+  /* width: 1400px; */
   margin: 0 auto;
 }
 
@@ -109,6 +109,7 @@
   color: #000;
   line-height: 1.2;
 }
+
 #content .title_area p {
   font-size: 1.2rem;
   text-align: center;
