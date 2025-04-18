@@ -46,8 +46,7 @@
       <div class="sub_nav">
         <ul>
           <li><a class="current" href="./sub4_1.html">경영정보</a></li>
-          <li><a href="./sub4_2.html">주가정보</a></li>
-          <li><a href="./sub4_3.html">재무정보</a></li>
+          <li><a href="./sub4_2.html">정책제도정보</a></li>
         </ul>
       </div>
       <article id="content">
@@ -60,268 +59,200 @@
         </div>
 
         <div class="content_area">
-          <div class="content_top">
-            <h3 class="hidden">대표 프로젝트</h3>
-            <div class="content_intro">
-              <div class="content_intro_txt" data-aos="fade-up" data-aos-duration="1000"></div>
+          <div class="content_container">
+            <div class="con_nav">
+              <ul class="tab_menu">
+                <li><a class="tab active" id="tab1" href="#tab1">매출액</a></li>
+                <li><a class="tab" id="tab2" href="#tab2">영업이익</a></li>
+                <li><a class="tab" id="tab3" href="#tab3">순이익</a></li>
+                <li><a class="tab" id="tab4" href="#tab4">총자산</a></li>
+              </ul>
             </div>
-
-            <div class="main_content">
-              <div class="content_inner">
-                <div class="con_table">
-                  <div class="table_txt">
-                    <h4>주주 구성</h4>
-                    <p>(2024년 기준)</p>
-                  </div>
-                  <table class="t_type2">
-                    <thead>
-                      <tr class="g_back">
-                        <th scope="col">순위</th>
-                        <th scope="col">구분</th>
-                        <th scope="col">지분율</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th>1</th>
-                        <td>국내기관 및 개인</td>
-                        <td>57.1%</td>
-                      </tr>
-                      <tr>
-                        <th>2</th>
-                        <td>특수관계인</td>
-                        <td>23.6%</td>
-                      </tr>
-                      <tr>
-                        <th>3</th>
-                        <td>외국인</td>
-                        <td>18.5%</td>
-                      </tr>
-                      <tr>
-                        <th>4</th>
-                        <td>자사주</td>
-                        <td>0.8%</td>
-                      </tr>
-                    </tbody>
-                  </table>
+            <div class="area_chart">
+              <div id="tab1" class="chart1 cht active">
+                <div class="chart_txt">
+                  <h3>매출액</h3>
+                  <p>(단위 : 억원)</p>
                 </div>
+                <canvas id="myChart1"></canvas>
               </div>
-
-              <div class="content_inner">
-                <div class="con_table">
-                  <div class="table_txt">
-                    <!-- <h4>요약 연결손익계산서</h4>
-                    <p>(단위 : 백만원)</p> -->
-                  </div>
-                  <div class="table_txt txt_2">
-                    <h4>GS건설 지배구조 관련 정보</h4>
-                    <p>기업지배구조 핵심지표 준수 현황</p>
-                  </div>
-                  <table class="t_type1">
-                    <thead>
-                      <tr class="g_back">
-                        <th scope="col">구분</th>
-                        <th scope="col">핵심지표</th>
-                        <th scope="col">준수여부</th>
-                        <th scope="col">비고</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row" rowspan="4">주주</th>
-                        <td>① 주주총회 4주 전에 소집공고 실시</td>
-                        <td class="align">O</td>
-                        <td>주주총회 5주 전(30일전) 공고</td>
-                      </tr>
-                      <tr>
-                        <td>② 전자투표 실시</td>
-                        <td class="align">X</td>
-                        <td>전자투표제도 도입</td>
-                      </tr>
-                      <tr>
-                        <td>③ 주주총회의 집중일 이외 개최</td>
-                        <td class="align">X</td>
-                        <td>해외종속회사 결산 지연 등의 사유로 미준수</td>
-                      </tr>
-                      <tr>
-                        <td>④ 배당정책 및 배당실시 계획을 연 1회 이상 주주에게 통지</td>
-                        <td class="align">O</td>
-                        <td>배당결정공시, 지급공고를 통해 안내</td>
-                      </tr>
-                      <tr>
-                        <th scope="row" rowspan="6">기타손익</th>
-                        <td>⑤ 최고경영자 승계정책(비상시 선임정책 포함) 마련 및 운영</td>
-                        <td class="align">O</td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td>⑥ 내부통제정책 마련 및 운영</td>
-                        <td class="align">O</td>
-                        <td>CP 도입 운영, 리스크관리, 준법경영, 내부회계관리 등 운영 중</td>
-                      </tr>
-                      <tr>
-                        <td>⑦ 이사회 의장과 대표이사 분리</td>
-                        <td class="align">X</td>
-                        <td>미분리</td>
-                      </tr>
-                      <tr>
-                        <td>⑧ 집중투표제 채택</td>
-                        <td class="align">X</td>
-                        <td>정관상 배제</td>
-                      </tr>
-                      <tr>
-                        <td>⑨ 기업가치 훼손 또는 주주권익 침해에 책임이 있는 자의 임원 선임을 방지하기 위한 정책 수립 여부</td>
-                        <td class="align">O</td>
-                        <td>정책수립 및 운영</td>
-                      </tr>
-                      <tr>
-                        <td>⑩ 6년 초과 장기재직 사외이사 부존재</td>
-                        <td class="align">O</td>
-                        <td>장기재직 사외이사 부존재</td>
-                      </tr>
-                      <tr>
-                        <th scope="row" rowspan="6">감사기구</th>
-                        <td>⑪ 내부감사기구에 대한 연 1회 이상 교육 제공</td>
-                        <td class="align">O</td>
-                        <td>교육계획 수립 및 제공</td>
-                      </tr>
-                      <tr>
-                        <td>⑫ 독립적인 내부감사부서(내부감사업무 지원 조직)의 설치</td>
-                        <td class="align">O</td>
-                        <td>독립적인 조직의 설치 및 운영</td>
-                      </tr>
-                      <tr>
-                        <td>⑬ 내부감사기구에 회계 또는 재무 전문가 존재 여부</td>
-                        <td class="align">O</td>
-                        <td>감사위원회 위원 중 회계전문가 존재</td>
-                      </tr>
-                      <tr>
-                        <td>⑭ 내부감사기구가 분기별 1회 이상 경영진 참석 없이 <br />외부감사인과 회의 개최</td>
-                        <td class="align">O</td>
-                        <td>매 감사위원회 회의 종류 후, 경영진 참여없이 <br />감사위원회와 외부감사인의 회의 개최</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          ⑮ 경영 관련 중요정보에 내부감사기구가 접근할 수 있는<br />
-                          절차를 마련하고 있는지 여부
-                        </td>
-                        <td class="align">O</td>
-                        <td>감사위원회 운영규정으로 위원회의 권한 명시</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <div class="con_table">
-                    <div class="table_txt">
-                      <h4>주주 총회</h4>
-                      <p>
-                        제 55기 주주총회 결과(출석 주식수: 40,138,039 주) <br />
-                        최대주주 및 특수관계인 제외 출석률: 24.86%
-                      </p>
-                    </div>
-                    <table class="t_type3">
-                      <thead>
-                        <tr class="g_back">
-                          <th scope="col"></th>
-                          <th scope="col">부의안건</th>
-                          <th scope="col">가결여부</th>
-                          <th scope="col">찬성율</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <th>제1호 의안</th>
-                          <td>
-                            <p>
-                              ∙ 제 55기 재무제표 및 연결재무제표 승인의 건 <br />
-                              (이익잉여금처분계산서 포함)
-                            </p>
-                          </td>
-                          <td>가결</td>
-                          <td>94.9%</td>
-                        </tr>
-                        <tr>
-                          <th>제2호 의안</th>
-                          <td>정관 일부 변경의 건</td>
-                          <td>가결</td>
-                          <td>98.2%</td>
-                        </tr>
-                        <tr>
-                          <th>제3호 의안</th>
-                          <td>
-                            ∙ 이사 선임의 건(사내이사 1명) <br />
-                            - 사내이사 허윤홍 선임의 건
-                          </td>
-                          <td>가결</td>
-                          <td>97.4%</td>
-                        </tr>
-                        <tr>
-                          <th>제1호 의안</th>
-                          <td>
-                            ∙ 감사위원회 위원이 되는 사외이사 선임의 건(1명) <br />
-                            - 감사위원회 위원이 되는 사외이사 황철규 선임의 건
-                          </td>
-                          <td>가결</td>
-                          <td>97.5%</td>
-                        </tr>
-                        <tr>
-                          <th>제5호 의안</th>
-                          <td>∙ 이사 보수한도 승인의 건</td>
-                          <td>가결</td>
-                          <td>85.4%</td>
-                        </tr>
-                      </tbody>
-                    </table>
-
-                    <div class="table_txt txt_3">
-                      <h4>ESG 평가등급</h4>
-                      <p>(2024년 기준)</p>
-                    </div>
-
-                    <table class="t_type4">
-                      <thead>
-                        <tr class="g_back">
-                          <th scope="col">구분</th>
-                          <th scope="col">2021년</th>
-                          <th scope="col">2022년</th>
-                          <th scope="col">2023년</th>
-                          <th scope="col">2024년</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <th>ESG 평가등급</th>
-                          <td>A</td>
-                          <td>A</td>
-                          <td>A</td>
-                          <td>A</td>
-                        </tr>
-                        <tr>
-                          <th>지배구조</th>
-                          <td>A</td>
-                          <td>A</td>
-                          <td>A</td>
-                          <td>A</td>
-                        </tr>
-                        <tr>
-                          <th>사회</th>
-                          <td>B+</td>
-                          <td>A+</td>
-                          <td>A</td>
-                          <td>B+</td>
-                        </tr>
-                        <tr>
-                          <th>환경</th>
-                          <td>A</td>
-                          <td>A</td>
-                          <td>A</td>
-                          <td>A</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                    <p class="esg">※ 평가기관 : 한국ESG기준원(KCGS)</p>
-                  </div>
+              <div id="tab2" class="chart2 cht">
+                <div class="chart_txt">
+                  <h3>영업이익</h3>
+                  <p>(단위 : 억원)</p>
                 </div>
+                <canvas id="myChart2"></canvas>
               </div>
+              <div id="tab3" class="chart3 cht">
+                <div class="chart_txt">
+                  <h3>순이익</h3>
+                  <p>(단위 : 억원)</p>
+                </div>
+                <canvas id="myChart3"></canvas>
+              </div>
+              <div id="tab4" class="chart4 cht">
+                <div class="chart_txt">
+                  <h3>총자산</h3>
+                  <p>(단위 : 억원)</p>
+                </div>
+                <canvas id="myChart4"></canvas>
+              </div>
+            </div>
+          </div>
+          <div class="content_inner">
+            <div class="con_table">
+              <div class="table_txt">
+                <h4>요약 연결재무상태표</h4>
+                <p>(단위 : 백만원)</p>
+              </div>
+              <table class="t_type1">
+                <colgroup>
+                  <col style="width: 240px" />
+                  <col style="width: 290px" />
+                  <col style="width: 290px" />
+                  <col style="width: 290px" />
+                  <col style="width: 290px" />
+                </colgroup>
+                <thead>
+                  <tr class="g_back">
+                    <th scope="col" colspan="2">구분</th>
+                    <th scope="col">2021</th>
+                    <th scope="col">2022</th>
+                    <th scope="col">2023</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="rowgroup" rowspan="2">자산</th>
+                    <th scope="row">유동자산</th>
+                    <td>1,183,933</td>
+                    <td>1,366,113</td>
+                    <td>1,857,062</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">비유동자산</th>
+                    <td>8,272,040</td>
+                    <td>8,466,310</td>
+                    <td>8,184,954</td>
+                  </tr>
+                  <tr class="g_back">
+                    <th scope="row" colspan="2">자산총계</th>
+                    <td>9,455,973</td>
+                    <td>9,832,423</td>
+                    <td>10,042,016</td>
+                  </tr>
+                  <tr>
+                    <th scope="rowgroup" rowspan="2">부채</th>
+                    <th scope="row">유동부채</th>
+                    <td>2,055,199</td>
+                    <td>2,173,618</td>
+                    <td>2,664,089</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">비유동부채</th>
+                    <td>2,986,388</td>
+                    <td>3,238,800</td>
+                    <td>2,944,188</td>
+                  </tr>
+                  <tr class="g_back">
+                    <th scope="row" colspan="2">부채총계</th>
+                    <td>104,718</td>
+                    <td>104,718</td>
+                    <td>104,718</td>
+                  </tr>
+                  <tr>
+                    <th scope="rowgroup" rowspan="2">자본</th>
+                    <th scope="row">자본금</th>
+                    <td>2,055,199</td>
+                    <td>2,173,618</td>
+                    <td>2,664,089</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">이익잉여금 등</th>
+                    <td>4,309,668</td>
+                    <td>4,315,287</td>
+                    <td>4,329,021</td>
+                  </tr>
+                  <tr class="g_back">
+                    <th scope="row" colspan="2">자본총계</th>
+                    <td>4,414,386</td>
+                    <td>4,420,005</td>
+                    <td>4,433,739</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="con_table">
+              <div class="table_txt">
+                <h4>요약 연결손익계산서</h4>
+                <p>(단위 : 백만원)</p>
+              </div>
+              <table class="t_type2">
+                <thead>
+                  <tr class="g_back">
+                    <th scope="col">구분</th>
+                    <th scope="col">2021</th>
+                    <th scope="col">2022</th>
+                    <th scope="col">2023</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>매출액</th>
+                    <td>9,517,214</td>
+                    <td>11,031,893</td>
+                    <td>11,612,548</td>
+                  </tr>
+                  <tr>
+                    <th>매출총이익</th>
+                    <td>2,163,177</td>
+                    <td>2,832,293</td>
+                    <td>2,960,024</td>
+                  </tr>
+                  <tr>
+                    <th>판매비와 관리비</th>
+                    <td>1,870,705</td>
+                    <td>2,472,107</td>
+                    <td>2,566,069</td>
+                  </tr>
+                  <tr>
+                    <th>영업이익</th>
+                    <td>292,472</td>
+                    <td>360,186</td>
+                    <td>393,955</td>
+                  </tr>
+                  <tr>
+                    <th>기타손익</th>
+                    <td>597,912</td>
+                    <td>-57,578</td>
+                    <td>-7,548</td>
+                  </tr>
+                  <tr>
+                    <th>금융손익</th>
+                    <td>58,911</td>
+                    <td>-75,767</td>
+                    <td>-83,863</td>
+                  </tr>
+                  <tr>
+                    <th>지분법손익</th>
+                    <td>42,216</td>
+                    <td>-15,138</td>
+                    <td>-154,585</td>
+                  </tr>
+                  <tr>
+                    <th>법인세비용 차감전순이익</th>
+                    <td>991,511</td>
+                    <td>211,703</td>
+                    <td>147,959</td>
+                  </tr>
+                  <tr class="g_back">
+                    <th>당기순이익</th>
+                    <td>801,276</td>
+                    <td>47,610</td>
+                    <td>22,148</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
@@ -330,10 +261,15 @@
       <?include "../common/sub_footer.html"?>
     </div>
 
+    <script src="https://kit.fontawesome.com/f2fbef274a.js" crossorigin="anonymous"></script>
     <script src="../common/js/jquery-1.12.4.min.js"></script>
+    <script src="../common/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="../common/js/jquery.easing.1.3.js"></script>
+    <script src="../common/js/aos.js"></script>
     <script src="../common/js/common.js"></script>
-    <script src="./js/sub2_1.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./js/chart.js"></script>
+    <script src="./js/main_chart.js"></script>
+    <script src="./js/sub4_1tab.js"></script>
     <script>
       AOS.init({
         easing: "ease-in-out-sine",

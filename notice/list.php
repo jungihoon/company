@@ -93,7 +93,6 @@ $number = $total_record - $start;
 			</div>
 			<div class="content_area">
 				<div class="summary">
-					<p>야 장난치면 뒤진다</p>
 				</div>
 
 				<div class="photo_bbs_wrap">
