@@ -6,11 +6,11 @@ const cht4 = document.getElementById("myChart4");
 const chart1 = new Chart(cht1, {
   type: "bar", //차트 종류
   data: {
-    labels: ["2021", "2022", "2023"],
+    labels: ["2022", "2023", "2024"],
     datasets: [
       {
         label: "매출액",
-        data: [95172, 110319, 116125],
+        data: [12299, 13436, 12863],
         backgroundColor: [
           "rgba(245, 131, 27, 0.2)", // labels[0]
           "rgba(153, 204, 0, 0.2)", // labels[1]
@@ -63,11 +63,11 @@ const chart1 = new Chart(cht1, {
 const chart2 = new Chart(cht2, {
   type: "bar", //차트 종류
   data: {
-    labels: ["2021", "2022", "2023"],
+    labels: ["2022", "2023", "2024"],
     datasets: [
       {
-        label: "매출액",
-        data: [2925, 3602, 3940],
+        label: "영업이익",
+        data: [5548, -3879, 2860],
         backgroundColor: [
           "rgba(245, 131, 27, 0.2)", // labels[0]
           "rgba(153, 204, 0, 0.2)", // labels[1]
@@ -120,11 +120,11 @@ const chart2 = new Chart(cht2, {
 const chart3 = new Chart(cht3, {
   type: "bar", //차트 종류
   data: {
-    labels: ["2021", "2022", "2023"],
+    labels: ["2022", "2023", "2024"],
     datasets: [
       {
-        label: "매출액",
-        data: [8013, 476, 221],
+        label: "순이익",
+        data: [4412, -4195, 2639],
         backgroundColor: [
           "rgba(245, 131, 27, 0.2)", // labels[0]
           "rgba(153, 204, 0, 0.2)", // labels[1]
@@ -189,8 +189,8 @@ const chart4 = new Chart(cht4, {
     labels: ["2021", "2022", "2023"],
     datasets: [
       {
-        label: "매출액",
-        data: [94560, 98324, 100420],
+        label: "총자산",
+        data: [137701, 98717, 108424],
         backgroundColor: [
           "rgba(245, 131, 27, 0.2)", // labels[0]
           "rgba(153, 204, 0, 0.2)", // labels[1]
